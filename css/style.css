@@ -1,0 +1,16 @@
+*{
+    background-color: pink;
+}
+
+.item1 {}
+.container{
+    display: grid;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    column-gap: 6;
+
+    grip-templates-areas: "header header header header header header"
+}
+
+.container
