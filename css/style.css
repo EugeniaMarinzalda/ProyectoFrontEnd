@@ -1,16 +1,52 @@
-*{
-    background-color: pink;
+* {
+    background-color: rgb(223, 98, 119);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.item1 {}
-.container{
-    display: grid;
+
+.container {
     width: 90%;
     max-width: 1000px;
+    display: grid;
     margin: auto;
-    column-gap: 6;
-
-    grip-templates-areas: "header header header header header header"
+    grid-template-areas:
+        "header header"
+        "main main"
+        "about local"
+        "goals goals"
+        "staff staff"
+        "footer footer"
+    ;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto;
+    column-gap: 5%;
 }
 
-.container
+.header {
+    background-color: white;
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.local {
+    grid-area: local;
+}
+
+.about {
+    grid-area: about;
+}
+
+.goals {
+    grid-area: goals;
+}
+
+.staff {
+    grid-area: staff;
+}
+
+.footer {
+    grid-area: footer;
+}
