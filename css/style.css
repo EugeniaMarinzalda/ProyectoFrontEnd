@@ -22,12 +22,12 @@
     column-gap: 5%;
 }
 
-.header {
+header {
     background-color: white;
     grid-area: header;
 }
 
-.main {
+main {
     grid-area: main;
 }
 
@@ -47,6 +47,6 @@
     grid-area: staff;
 }
 
-.footer {
+footer {
     grid-area: footer;
 }
