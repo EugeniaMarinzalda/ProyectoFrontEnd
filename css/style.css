@@ -1,52 +1,158 @@
 * {
-    background-color: rgb(223, 98, 119);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    
+    
 }
 
+html{
+    width: ;
+    background-color: #fee2e2;
+}
 
-.container {
-    width: 90%;
-    max-width: 1000px;
+body {
+   
     display: grid;
-    margin: auto;
-    grid-template-areas:
-        "header header"
-        "main main"
-        "about local"
-        "goals goals"
-        "staff staff"
-        "footer footer"
-    ;
-    grid-template-columns: 80% 20%;
-    grid-template-rows: auto;
-    column-gap: 5%;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-columns: 1fr;
+    background-color: white;
+    width: 80vw; /* decir porque el aqui 80% */
+    margin: 0 auto;
+    align-content: ;
 }
+
 
 header {
-    background-color: white;
+    font-size: 0.7em;
+    background-color: rgb(255, 255, 255);    
     grid-area: header;
+    width: 83%;
+    margin: ;
+    display: flex;
+    flex-direction: row; /* por defecto */
+    justify-content: space-between;
+    align-items: ;
+    padding: 0 4px;
+    background-color: #ffffff; /* Color de fondo del encabezado */
+    color: rgb(0, 0, 0); /* Color del texto en el encabezado */
+    position: fixed;
+    top: ;
 }
 
+nav{
+   display: flex;
+   align-items: center;
+  
+}
+
+.logo img {
+    height: 50px; /* Ajusta la altura del logo según tus necesidades */
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px; /* Espacio entre cada enlace */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer enlace */
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0); /* Color del texto de los enlaces */
+    text-decoration: none; /* Elimina la decoración de subrayado de los enlaces */
+}
+    
 main {
+    background-color: rgb(255, 255, 255);
     grid-area: main;
-}
-
-.local {
-    grid-area: local;
-}
-
-.about {
-    grid-area: about;
-}
-
-.goals {
-    grid-area: goals;
-}
-
-.staff {
-    grid-area: staff;
+    width: 100%;
+    margin: ;
 }
 
 footer {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
     grid-area: footer;
+    width: 100%;
+    margin: ;
+}
+
+/* seccion servicios */
+
+
+
+.carousel{
+    font-size: 0.7em;
+    display:flex;
+    flex-wrap: ;
+    row-gap: ;
+    column-gap: 10px;
+    margin: auto;
+    width: 80vw;
+    height: auto;
+    background-color: ;
+    justify-content: ;
+    overflow: scroll;
+    
+    
+    
+}
+.item{
+    display: flex;
+    align-items: flex-end;
+    border: ;
+    width:100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 10px;
+    color: black;
+    text-align: bottom;
+    flex-shrink: 0;
+}
+
+.item:hover{
+    border: 2px solid pink;
+    
+    
+}
+.item-1{
+   background-image: url('../img/hydraFacial-1.png'); 
+}
+.item-2{
+   background-image: url('../img/hydraFacial-2.png'); 
+}
+.item-3{
+   background-image: url('../img/laser-1.jpg'); 
+}
+.item-4{
+   background-image: url('../img/laser-2.jpg'); 
+}
+.item-5{
+   background-image: url('../img/acidoH-1.jpg');
+}
+.item-6{
+   background-image: url('../img/acidoH-2.jpg'); 
+}
+
+#sec-servi p {
+    font-size: 0.7em;
+    padding: 10px;
+}
+
+#sec-servi {
+    background-color: pink;
+    border-radius: 10px;
+    padding: 10px;
+    width:98%;
+    margin: 0 auto;
 }
