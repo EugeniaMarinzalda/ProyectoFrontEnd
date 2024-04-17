@@ -1,94 +1,183 @@
 * {
-   
-    box-sizing: border-box;
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-    
-    
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    font-family: "Roboto", sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+
+    
+
 }
 
-html{
-    width: ;
-    background-color: #fee2e2;
+
+h1,
+
+h2,
+
+h3,
+
+h4,
+
+h5,
+
+h6 {
+
+    font-family: "Playfair Display", serif;
+
 }
+
+
 
 body {
-   
-    display: grid;
-    grid-template-areas: "header" "main" "footer";
-    grid-template-columns: 1fr;
-    background-color: white;
-    width: 80vw; /* decir porque el aqui 80% */
-    margin: 0 auto;
-    align-content: ;
-}
 
+    display: grid;
+
+    grid-template-areas: "header" "main" "footer";
+
+    grid-template-columns: 1fr;
+
+    background-color: #fee2e2;
+
+}
 
 header {
-    font-size: 0.7em;
-    background-color: rgb(255, 255, 255);    
-    grid-area: header;
-    width: 83%;
-    margin: ;
-    display: flex;
-    flex-direction: row; /* por defecto */
-    justify-content: space-between;
-    align-items: ;
-    padding: 0 4px;
-    background-color: #ffffff; /* Color de fondo del encabezado */
-    color: rgb(0, 0, 0); /* Color del texto en el encabezado */
-    position: fixed;
-    top: ;
+
+    background-color: rgb(255, 255, 255);
+
+    border: 2px solid black;
+
+    grid-area: "header";
+
+    width: 80%;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background-color: #ffffff; /* Color de fondo del encabezado */
+
+    color: rgb(0, 0, 0); /* Color del texto en el encabezado */
+
+    position:sticky;
+
+    top: 0;
+
 }
 
-nav{
-   display: flex;
-   align-items: center;
-  
-}
 
 .logo img {
-    height: 50px; /* Ajusta la altura del logo según tus necesidades */
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-   
+
+    height: 70px; /* Ajusta la altura del logo según tus necesidades */
+
 }
 
-nav ul li {
-    display: inline-block;
-    margin-left: 20px; /* Espacio entre cada enlace */
+
+nav{
+
+    overflow: hidden;
+
 }
 
-nav ul li:first-child {
-    margin-left: 0; /* Elimina el margen izquierdo del primer enlace */
+
+nav ul.menu {
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
 }
 
-nav ul li a {
-    color: rgb(0, 0, 0); /* Color del texto de los enlaces */
-    text-decoration: none; /* Elimina la decoración de subrayado de los enlaces */
+
+nav ul.menu li {
+
+    display: inline-block;
+
+    margin-left: 20px; /* Espacio entre cada enlace */
+
 }
-    
+
+
+nav ul.menu li:first-child {
+
+    margin-left: 0; /* Elimina el margen izquierdo del primer enlace */
+
+}
+
+
+nav ul.menu li a {
+
+    float:left;
+
+    
+
+    color: rgb(111, 110, 110); /* Color del texto de los enlaces */
+
+    text-decoration: none; /* Elimina la decoración de subrayado de los enlaces */
+
+    padding: 12px 14px;
+
+
+}
+
+   
+
+nav ul li a:hover{
+
+    color: #f8b1b0; 
+
+    border: 1px solid #f8b1b0;
+
+
+}
+
 main {
-    background-color: rgb(255, 255, 255);
-    grid-area: main;
-    width: 100%;
-    margin: ;
+
+    background-color: rgb(255, 255, 255);
+
+    grid-area: main;
+
+    width: 80%;
+
+    margin: auto ;
+
 }
+
 
 footer {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid black;
-    grid-area: footer;
-    width: 100%;
-    margin: ;
+
+    background-color: rgb(255, 255, 255);
+
+    border: 2px solid black;
+
+    grid-area: footer;
+
+    width: 80%;
+
+    margin: auto ;
+
 }
 
-/* seccion servicios */
 
+
+
+/* seccion servicios */
 
 
 .carousel{
@@ -98,15 +187,12 @@ footer {
     row-gap: ;
     column-gap: 10px;
     margin: auto;
-    width: 80vw;
+    width: 80%;
     height: auto;
     background-color: ;
     justify-content: ;
     overflow: scroll;
     
-    
-    
-}
 .item{
     display: flex;
     align-items: flex-end;
@@ -150,7 +236,7 @@ footer {
 }
 
 #sec-servi {
-    background-color: pink;
+    background-color: red;
     border-radius: 10px;
     padding: 10px;
     width:98%;
