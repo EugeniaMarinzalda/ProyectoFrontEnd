@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,11 +25,11 @@
         </nav>
 
     </header>
-    
+
     <main>
-           
-        <section>
-    
+                   
+        <section>
+
             <h1>Estetica</h1>
         </section>
         
@@ -93,12 +94,100 @@
             
         </section>
        
-</main>
+        <section>
+            <h2>Contactanos</h2>
+            <p></p>
+            <form action="show_data.html" target="_blank">
+                <label for="firstname">Nombre: </label>
+                <input type="text" name="firstname" id="firstname" placeholder="Ingrese su nombre aquí..." required>
+                <br>
+
+                <label for="lastname">Apellido: </label>
+                <input type="text" name="lastname" id="lastname" placeholder="Ingrese su apellido aquí..." required>
+                <br>
+
+                <label for="birthdate">Ingrese su fecha de nacimiento: </label>
+                <input type="date" name="birthdate" id="birthdate" required>
+                <br>
+
+                <label for="email">Correo Electrónico: </label>
+                <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico aquí..."
+                    required>
+                <br>
+
+                <label for="reason">Motivo: </label>
+                <br>
+
+                <input type="radio" name="reason" id="reservation" value="reservation">
+                <label for="reservation">Pedir un turno</label>
+                <br>
+
+                <input type="radio" name="reason" id="treatments" value="treatments">
+                <label for="treatments">Conocer más sobre los tratamientos</label>
+
+                <br>
+
+                <input type="radio" name="reason" id="place" value="place">
+                <label for="place">Acerca del lugar</label>
+                <br>
+
+
+                <input type="radio" name="reason" id="other" value="other">
+                <label for="other">Otras consultas</label>
+                <br>
+
+                <label for="query">Ingrese su consulta:</label>
+                <br>
+                <textarea name="query" id="query" cols="30" rows="10" required></textarea>
+                <br>
+
+                <button type="submit">Enviar</button>
+                <br>
+
+                <button type="reset">Borrar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Locales</h2>
+            <p>En Beauty Spa estamos orgullosos de atenderte en nuestras sucursales</p>
+
+            <h3>Casa central</h3>
+            <a href="https://maps.app.goo.gl/bzfqXS7dkY8kA8Sm8">Aguirre 2187, CABA</a>
+            <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.653382689082!2d-58.448302224885644!3d-34.58763605664795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f22f179757%3A0x9c5ca8c26875d076!2sAguirre%202187%2C%20C1414ATG%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1713570361895!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <h3>Sucursal Córdoba</h3>
+            <a href="https://maps.app.goo.gl/f7RG1bsTpqpqxNBN8">Av. Patria 352, Córdoba</a>
+            <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54482.53735502373!2d-64.22936797142032!3d-31.409756531072173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2a8f14c30ef%3A0x707ff0a3a177b2ff!2sKia%20Ora%20Spa%20Urbano!5e0!3m2!1ses-419!2sar!4v1713570560922!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <h3>Sucursal La Rioja</h3>
+            <a href="https://maps.app.goo.gl/y8AssbvbtnGvQVUV6">Ecuador 837, La Rioja</a>
+            <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111204.56512378863!2d-67.02078795664065!3d-29.424626599999975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9427dbc3cb045ce3%3A0xa2a3947c2e43f551!2sVELACENTER%20by%20Espacio%20Uno!5e0!3m2!1ses-419!2sar!4v1713570695587!5m2!1ses-419!2sar"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
+               
+          
+    </main>
 
 <footer>
         <h6>chau</h6>
+
 </footer>
     
     <script  src="js/script.js"></script>
+
 </body>
+
 </html>
