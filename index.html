@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>BeutySpaLOCAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./js/menu.js">
+
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html"><img src="./img/ODUJEN1.svg" alt="Logo"></a>
-        </div>
-        <nav>
-            <ul>
+        <img class="logo" src="./img/ODUJEN1.svg" alt="logo">
+        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Tratamientos</a></li>
                 <li><a href="#">Profesionales</a></li>
                 <li><a href="#">Contactanos</a></li>
+                <li><a id="boton-registro" href="#">Registro</a></li>
+
             </ul>
 
         </nav>
@@ -26,54 +39,97 @@
     </header>
 
     <main>
-                   
-                <section>
 
-            <h1>Estetica</h1>
-        </section>
-
-        <section id="sec-servi">
-            <h2>Prueba Nuestros Servicios</h2>
-            <p>Los servicios de estética más demandados en la actualidad son el bronceado, la depilación con cera y
-                láser, y los tratamientos corporales como las exfoliaciones. Cada uno tiene su objetivo y se realiza de
-                una manera específica, por lo que para realizarlos es imprescindible conocer en profundidad las
-                distintas técnicas.</p>
-
-
-            <div class="carousel">
-                <div class="item item-1">Depilacion Punta de Diamante</div>
-                <div class="item item-2">Depilacion Laser</div>
-                <div class="item item-3">HidraFacial</div>
-                <div class="item item-4">Otras</div>
-                <div class="item item-5">Otras</div>
+        <section class="Home">
+            <div class="texto">
+                <h1>Tratamiento de lujo <br> para el cuidado de la piel.</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur <br> adipisicing elit. Nemo, aperiam.</p>
+            </div>
+            <div class="imagen-home">
+                <img style="width: 400px;" src="./img/foto1.png" alt="">
 
             </div>
 
         </section>
-                 
-                <div class="local">
-                       
-                        <h2>Local</h2>
-                       
-                    </div>
-               
-                <div class="about">
-                       
-                        <h2>Sobre Nosotros</h2>
-                       
-                    </div>
-               
-                <div class="goals">
-                       
-                        <h2>Beneficios</h2>
-                       
-                    </div>
-               
-                <div class="staff">
-                       
-                        <h2>Profesionales</h2>
-                       
-                    </div>
+
+        <section id="sec-servi">
+
+            <div id="container-btn">
+
+                <div>
+                    <h2 id="text-servi">Prueba Nuestros Servicios</h2>
+                </div>
+
+                <div>
+
+                    <button id="backward" class="btn-style">←</button>
+                    <button id="forward" class="btn-style">→</button>
+
+                </div>
+
+            </div>
+
+            <div id="carousel-container">
+                <div id="carousel">
+                    <div class="item item-1">
+                        <p>Depilacion Punta de Diamante</p>
+                    </div>
+                    <div class="item item-2">
+                        <p>Depilacion Laser</p>
+                    </div>
+                    <div class="item item-3">
+                        <p>HidraFacial</p>
+                    </div>
+                    <div class="item item-4">
+                        <p>Otras</p>
+                    </div>
+                    <div class="item item-5">
+                        <p>Otras</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <div class="local">
+
+            <h2>Local</h2>
+
+        </div>
+
+        <div class="about">
+
+            <h2>Sobre Nosotros</h2>
+
+        </div>
+
+        <div class="goals">
+
+            <h2>Beneficios</h2>
+
+        </div>
+
+        <section id="staff">
+
+            <h2>El equipo médico está comprometido a brindar atención experta</h2>
+
+            <div id="container-professionals">
+                <div class="item item-6 item_2">
+                    <p>Dra Mercado Sandra</p>
+                </div>
+                <div class="item item-7 item_2">
+                    <p>Dra. Perea Alejandra</p>
+                </div>
+                <div class="item item-8 item_2">
+                    <p>Dra. Quinteros Rocio</p>
+                </div>
+                <div class="item item-9 item_2">
+                    <p>Dra. Gallardo Patricia</p>
+                </div>
+            </div>
+
+        </section>
 
         <section>
             <h2>Contactanos</h2>
@@ -158,13 +214,68 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </section>
-               
-          
     </main>
 
-    <footer>
-        <h6>chau</h6>
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <img class="footer-logo" src="./img/logo_white.svg" alt="">
+                    <p id="reseña">Beauty Spa ofrece tratamientos personalizados para el cuidado de la piel. Analizamos
+                        cuidadosamente tu piel para brindarte soluciones personalizadas.</p>
+
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tratamientos</h4>
+                    <ul>
+                        <li><a href="">Depilacion Punta de Diamante</a></li>
+                        <li><a href="">Depilacion Laser</a></li>
+                        <li><a href="">HidraFacial</a></li>
+                        <li><a href="">Otras</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contenido</h4>
+                    <ul>
+                        <li><a href="">Nosotros</a></li>
+                        <li><a href="">Tratamientos</a></li>
+                        <li><a href="">Porfesionales</a></li>
+                        <li><a href="">Contactanos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone-volume"></i> (302) 5555-2030</a></li>
+                        <li><a href="mailto:"><i class="fa-solid fa-envelope"></i> beautyspa@gmail.com</a></li>
+                        <li><a href="#"><i class="fa-solid fa-location-dot"></i> Aguirre 2187 CABA</a></li>
+                    </ul>
+                </div>
+                <div class="social-media">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+
+                </div>
+                <div class="copyrigth">
+                    <p>© 2024 All rights reserved Created by GRUPO 15 CAC</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
     </footer>
+
+    <script src="js/script.js"></script>
 
 </body>
 
