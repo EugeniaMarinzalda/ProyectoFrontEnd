@@ -34,4 +34,3 @@ cerrar.addEventListener("click", () => {
     nav.classList.add("visible");
 })
 
-
