@@ -31,6 +31,6 @@ abrir.addEventListener("click", () => {
 })
 
 cerrar.addEventListener("click", () => {
-    nav.classList.add("visible");
+    nav.classList.remove("visible");
 })
 
