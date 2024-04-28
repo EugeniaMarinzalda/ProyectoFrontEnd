@@ -39,7 +39,7 @@
     </header>
 
     <main>
-        
+
         <section class="Home">
             <div class="texto">
                 <h1>Tratamiento de lujo <br> para el cuidado de la piel.</h1>
@@ -91,21 +91,21 @@
             </div>
 
         </section>
-        
+
         <div class="about">
-            
+
             <h2>Sobre Nosotros</h2>
-            
-            </div>
-        
+
+        </div>
+
         <div class="goals">
-            
+
             <h2>Beneficios</h2>
-            
-            </div>
-        
+
+        </div>
+
         <section id="staff">
-            
+
             <h2>El equipo médico está comprometido a brindar atención experta</h2>
 
             <div id="container-professionals">
@@ -124,10 +124,9 @@
             </div>
 
         </section>
-        
-        <section>
-            <h2>Contactanos</h2>
-            <p></p>
+
+        <section id="contact">
+            <h2>Contáctanos</h2>
             <form action="show_data.html" target="_blank">
                 <label for="firstname">Nombre: </label>
                 <input type="text" name="firstname" id="firstname" placeholder="Ingrese su nombre aquí..." required>
@@ -147,24 +146,25 @@
                 <br>
 
                 <label for="reason">Motivo: </label>
-                <br>
+                <ul id="reason">
+                    <li>
+                        <input type="radio" name="reason" id="reservation" value="reservation">
+                        <label for="reservation">Pedir un turno</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="reason" id="treatments" value="treatments">
+                        <label for="treatments">Conocer más sobre los tratamientos</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="reason" id="place" value="place">
+                        <label for="place">Acerca del lugar</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="reason" id="other" value="other">
+                        <label for="other">Otras consultas</label>
+                    </li>
+                </ul>
 
-                <input type="radio" name="reason" id="reservation" value="reservation">
-                <label for="reservation">Pedir un turno</label>
-                <br>
-
-                <input type="radio" name="reason" id="treatments" value="treatments">
-                <label for="treatments">Conocer más sobre los tratamientos</label>
-
-                <br>
-
-                <input type="radio" name="reason" id="place" value="place">
-                <label for="place">Acerca del lugar</label>
-                <br>
-
-
-                <input type="radio" name="reason" id="other" value="other">
-                <label for="other">Otras consultas</label>
                 <br>
 
                 <label for="query">Ingrese su consulta:</label>
