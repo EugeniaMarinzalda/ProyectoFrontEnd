@@ -374,7 +374,7 @@ nav {
 /* -------- Contactanos -------- */
 
 #contact {
-    background-color: #fee5fe;
+    background-color: #fff5ee;
     width: 80%;
     text-align: center;
     margin: 20px auto;
@@ -436,10 +436,68 @@ nav {
 #contact button[type="reset"]:hover {
     background-color: #fff;
     color: #f8b1b0;
+    border: 1px solid #7e7e7e;
 }
 
 
 /* -------- Locales -------- */
+
+#branch {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#branch h2 {
+    margin: 10px;
+}
+
+#branch p {
+    margin: 5px;
+    text-align: center;
+}
+
+#select-branch{
+    margin: 10px;
+    text-align: center;
+}
+#select-branch select{
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #f8b1b0; 
+    color: #fff;
+    text-align: center; 
+    padding: 8px 12px;
+    font-size: 1.2rem; 
+    outline: none;
+    border:0;
+}
+
+#select-branch option {
+    font-size: 14px;
+}
+
+#mapa-branch {
+    text-align: center;
+}
+
+#mapa-branch a {
+    font-size: 18px; 
+    color: #f8b1b0; 
+    transition: color 0.3s;
+    display: block;
+}
+
+#mapa-branch a:hover {
+    color: #7e7e7e; 
+}
+
+#branch iframe {
+    width: 100%;
+    height: 60vh; 
+    border: 0;
+    border-radius: 10px;
+}
+
 
 /* -------- Footer -------- */
 
