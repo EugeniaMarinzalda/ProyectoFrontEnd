@@ -635,3 +635,16 @@ footer {
     border-bottom-right-radius: 10px;
 
 }
+
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 9999; 
+}
+
+.whatsapp-link img {
+    width: 70px; 
+    height: auto;
+    
+}
