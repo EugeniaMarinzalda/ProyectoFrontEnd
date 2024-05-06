@@ -62,11 +62,27 @@ nav {
     overflow: hidden;
 }
 
-.botonregistro {
+/*.botonregistro {
     display: flex;
     margin: 1rem;
     padding: 1rem;
     font-size: 2%;
+
+}*/
+.login-text{
+    color: #ffffff;
+}
+.login-text:hover{
+    color: #7e7e7e;
+}
+.btn {
+    background-color: #f6b4b1;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
 
 }
 
@@ -655,4 +671,3 @@ footer {
     filter: hue-rotate(90deg);
     
 }
-

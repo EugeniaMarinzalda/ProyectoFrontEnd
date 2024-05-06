@@ -60,7 +60,7 @@ window.onload = mostrarSucursal;
 
 document.getElementById("sucursal").addEventListener("change", mostrarSucursal);
 
-/*Para solucionar el desplazamiento del scroll por el header fijo*/ 
+/*Para solucionar el desplazamiento del scroll por el header fijo*/
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -79,5 +79,143 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+/*Seccion contato*/
+var form = document.querySelector('#form');
+var btnContact = document.querySelector('#btn-contact');
+var msj = document.querySelector('#msj')
+var btnMsj = document.querySelector('#btn-msj');
+btnMsj.style.display = 'none';
 
+btnContact.onclick = () => {
+    event.preventDefault();
+    msj.innerHTML = `<p>Contacto realizador satisfactoriamente a nombre de:</p>
+        <span>${document.querySelector('#lastname').value},</span>
+        <span>${document.querySelector('#firstname').value}</span>
+        <p>${document.querySelector('#email').value}</p>
+        `;
 
+    for (var element of form.elements) {
+        element.value = '';
+    };
+
+    btnMsj.style.display = 'block';
+
+};
+
+btnMsj.onclick = () => {
+    msj.style.display = 'none';
+    btnMsj.style.display = 'none';
+}
+ /*Registro*/
+
+function redireccionar() {
+    // Redireccionar a la página deseada
+    window.location.href = "index.html";
+
+  }
+  function validar() {
+    let usuario = document.getElementById("usuario");
+    let clave = document.getElementById("clave");
+    let error = false;
+    document.getElementById("validar_usuario").innerHTML = "&nbsp; ";
+    document.getElementById("validar_clave").innerHTML = "&nbsp; ";
+
+    if (usuario.value == "") {
+        document.getElementById("validar_usuario").innerHTML = "Debe completar el usuario";
+        error = true;
+        usuario.focus();
+    }
+
+    
+    if (clave.value.length < 8) {
+        document.getElementById("validar_clave").innerHTML = "Debe completar el clave con 8 caracteres como mínimo";
+        error = true;
+        clave.focus();
+    } else {
+        // Validar que la contraseña tenga al menos una letra mayúscula
+        let tieneMayuscula = false;
+        for (let i = 0; i < clave.value.length; i++) {
+            if (clave.value[i] === clave.value[i].toUpperCase() && clave.value[i] !== clave.value[i].toLowerCase()) {
+                tieneMayuscula = true;
+                break;
+            }
+        }
+        if (!tieneMayuscula) {
+            document.getElementById("validar_clave").innerHTML = "La contraseña debe contener al menos una letra mayúscula";
+            error = true;
+            clave.focus();
+        }
+    }
+
+    if (!error) {
+        event.preventDefault();
+        usuario.value = "";
+        document.getElementById("validar_usuario").innerHTML = "&nbsp;";
+        clave.value = "";
+        document.getElementById("validar_clave").innerHTML = "&nbsp;";
+        redireccionar();
+        
+    }
+
+    return !error;
+}
+
+function validarNvoUsuario() {
+    let usuarioNvo = document.getElementById("usuarioNvo");
+    let claveNva = document.getElementById("claveNva");
+    let error = false;
+    document.getElementById("validar_usuarioNvo").innerHTML = "&nbsp; ";
+    document.getElementById("validar_claveNva").innerHTML = "&nbsp; ";
+
+    if (usuarioNvo.value == "") {
+        document.getElementById("validar_usuarioNvo").innerHTML = "Debe completar el usuario";
+        error = true;
+        usuarioNvo.focus();
+    }
+    if (email.value == "") {
+        document.getElementById("validar_mail").innerHTML = "Debe completar el mail";
+        error = true;
+        email.focus();
+    }
+
+    if (claveNva.value.length < 8) {
+        document.getElementById("validar_claveNva").innerHTML = "Debe completar el clave con 8 caracteres como mínimo";
+        error = true;
+        claveNva.focus();
+    } else {
+        // Validar que la contraseña tenga al menos una letra mayúscula
+        let tieneMayuscula = false;
+        for (let i = 0; i < claveNva.value.length; i++) {
+            if (claveNva.value[i] === claveNva.value[i].toUpperCase() && claveNva.value[i] !== claveNva.value[i].toLowerCase()) {
+                tieneMayuscula = true;
+                break;
+            }
+        }
+        if (!tieneMayuscula) {
+            document.getElementById("validar_claveNva").innerHTML = "La contraseña debe contener al menos una letra mayúscula";
+            error = true;
+            claveNva.focus();
+        }
+    }
+    if (confirmClave.value === "") {
+        document.getElementById("validar_confirmClave").innerHTML = "Las claves deben coincidir";
+        error = true;
+        confirmClave.focus();
+    } else if (confirmClave.value !== claveNva.value) {
+        document.getElementById("validar_confirmClave").innerHTML = "Las claves deben coincidir";
+        error = true;
+        confirmClave.focus();
+    }
+
+    if (!error) {
+        event.preventDefault();
+        usuarioNvo.value = "";
+        document.getElementById("validar_usuarioNvo").innerHTML = "&nbsp;";
+        claveNva.value = "";
+        document.getElementById("validar_claveNva").innerHTML = "&nbsp;";
+        redireccionar();
+
+    }
+    return !error;
+    
+}

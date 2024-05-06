@@ -33,7 +33,7 @@
                 <li><a href="#staff">Profesionales</a></li>
                 <li><a href="#contact">Contactanos</a></li>
                 <li><a href="#branch">Locales</a></li>
-                <li><a id="boton-registro" href="#">Registro</a></li>
+                <li><a class="btn" href="registro.html" target="_blank"> <span class="login-text">Iniciar Sesion</span></a></li>
             </ul>
 
         </nav>
@@ -129,7 +129,7 @@
 
         <section id="contact">
             <h2>Contáctanos</h2>
-            <form action="show_data.html" target="_blank">
+            <form id="form" >
                 <label for="firstname">Nombre: </label>
                 <input type="text" name="firstname" id="firstname" placeholder="Ingrese su nombre aquí..." required>
                 <br>
@@ -143,7 +143,7 @@
                 <br>
 
                 <label for="email">Correo Electrónico: </label>
-                <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico aquí..."
+                <input type="email" value="holamundo@gmail.com" name="email" id="email" placeholder="Ingrese su correo electrónico aquí..."
                     required>
                 <br>
 
@@ -174,7 +174,19 @@
                 <textarea name="query" id="query" cols="30" rows="10" required></textarea>
                 <br>
 
-                <button type="submit">Enviar</button>
+                <div>
+                    <div id="msj">
+           
+                    </div>
+       
+                    <button id="btn-msj" >X</button>
+       
+                </div>
+               
+               
+                <button id="btn-contact" type="submit">Enviar</button>
+                <br>
+
                 <button type="reset">Borrar</button>
             </form>
         </section>

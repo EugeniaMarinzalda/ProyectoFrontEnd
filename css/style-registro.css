@@ -1,0 +1,109 @@
+*{  text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    color: #737373;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fee2e2;
+}
+
+
+.form-wrapper {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    margin-bottom: 10px;
+    overflow: hidden; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 25px); 
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 35px;
+    font-size: 16px;
+    float: left; 
+    outline: none; 
+    background-color: #fff; 
+    transition: background-color 0.3s; 
+    transition: border-color 0.3s;
+  
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #f8b1b0;
+    outline: none; 
+    
+}
+
+input[type="text"]:hover:not(:focus),
+input[type="email"]:hover:not(:focus),
+input[type="password"]:hover:not(:focus) {
+    border-color:#f8b1b0;
+    outline: none; 
+    
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    font-size: 14px;
+    text-align: left;
+    color: #cccccc;
+    
+}
+
+.registrarse {
+    clear: both; 
+}
+
+.form-terms {
+    margin-bottom: 5px;
+    clear: both; 
+    font-size: 14px;
+    color:#737373 ;
+}
+.form-help a{
+    font-size: 14px;
+    color:#737373 ;
+    text-decoration: none;
+
+}
+
+.registrarse{
+    background-color: #f8b1b0;
+    color: #fff;
+    border: none;
+    border-radius: 35px;
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: all .5s ease;
+}
+ .registrarse:hover{
+    background-color: #fff;
+    color: #f8b1b0;
+    border: 2px solid  #f8b1b0 ;
+ }

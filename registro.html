@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./js/script.js">
+    <link rel="stylesheet" href="./css/style-registro.css">
+
+</head>
+
+<body>
+   
+    <section class="form-wrapper">
+
+        <form id="registroForm" onsubmit="return validarNvoUsuario();">
+           
+            <h2>Registro de Usuario</h2> <br>
+            <div class="form-control">
+                <input type="text" id="usuarioNvo" name="usuarioNvo" placeholder="Nombre de usuario" value=""><br>
+                <div id="validar_usuarioNvo" style="color:#737373; font-size: 12px" >&nbsp; </div>
+            </div>
+
+            <div class="form-control">
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" value=""><br>
+                <div id="validar_mail" style="color:#737373; font-size: 12px" >&nbsp; </div>
+            </div>
+
+            <div class="form-control">
+                <input type="password" id="claveNva" name="claveNva" placeholder="Contraseña" value=""><br>
+                <div id="validar_claveNva" style="color:#737373; font-size: 12px;" >&nbsp; </div>
+            </div>
+            <div class="form-control">
+                <input type="password" id="confirmClave" name="confirmClave" placeholder="Confirmar contraseña"
+                    value=""><br>
+                <div id="validar_confirmClave" style="color:#737373; font-size: 12px"> &nbsp; </div>
+            </div>
+
+          <input class="registrarse"  type='submit' value="Registrarse"></td>
+            
+        </form><br>
+
+
+        <form onsubmit="return validar();">
+            <h2>Login</h2>
+            <br>
+            <div class="form-control">
+                <input type='text' name='usuario' id='usuario' placeholder="Usuario" value=""></br>
+                <div id="validar_usuario" style="color:#737373; font-size: 12px">&nbsp; </div>
+            </div>
+
+            <div class="form-control">
+                <input type='password' name='clave' id='clave' placeholder="Contraseña" value=""><br>
+                <div id="validar_clave" style="color:#737373; font-size: 12px">&nbsp; </div>
+            </div>
+            <div class="form-terms">
+                <div class="terms">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">Acepto términos y condiciones</label>
+                </div><br>
+            </div>
+            <input class="registrarse" type='submit' value='Enviar'></td>
+            
+
+            <div class="form-help">
+                <a href="#">Necesitas ayuda?</a>
+            </div>
+        </form>
+
+    </section>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
