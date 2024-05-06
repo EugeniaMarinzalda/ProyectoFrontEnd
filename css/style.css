@@ -211,7 +211,7 @@ nav {
 #carousel {
     font-size: 0.9em;
     display: flex;
-    column-gap: 10px;
+    column-gap: 24px;
     width: 80%;
     height: auto;
     z-index: 1;
@@ -220,46 +220,52 @@ nav {
 .item {
     display: flex;
     align-items: flex-end;
-    width: 300px;
-    height: 200px;
+    width: 320px;
+    height: 400px;
     background-size: cover;
-    border-radius: 10px;
+    border-radius: 24px;
     color: black;
     text-align: bottom;
     flex-shrink: 0;
+    overflow: hidden; 
+    
+    
 }
 
 .item p {
     text-align: center;
-    margin: 0px auto;
-    background-color: rgba(255, 192, 203, 0.5);
+    margin: 0p;
+    background: linear-gradient(to top, rgb(251, 172, 172) 0%, rgba(0, 0, 0, 0) 100%);
     color: white;
-    font-weight: bold;
     border-radius: 15px;
+    width: 100%; 
+  
 }
 
+
 .item:hover {
-    border: 2px solid pink;
+    border: 2.5px solid pink;
 }
 
 .item-1 {
-    background-image: url('../img/hydraFacial-1.png');
+    background-image: url('../img/facial1.png');
+    
 }
 
 .item-2 {
-    background-image: url('../img/hydraFacial-2.png');
+    background-image: url('../img/laser1.png');
 }
 
 .item-3 {
-    background-image: url('../img/laser-1.jpg');
+    background-image: url('../img/rellenoFacial1.png');
 }
 
 .item-4 {
-    background-image: url('../img/laser-2.jpg');
+    background-image: url('../img/reflexogeno.png');
 }
 
 .item-5 {
-    background-image: url('../img/acidoH-1.jpg');
+    background-image: url('../img/Radiofrecuencia.png');
 }
 
 .item-6 {
@@ -293,17 +299,17 @@ nav {
 }
 
 .btn-style {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: transparent;
-    border: 2px solid #fee2e2;
-    color: #fee2e2;
+    border: 2px solid #f8b1b0;
+    color:#f8b1b0;
 }
 
 
 .btn-style:hover {
-    background-color: #fee2e2;
+    background-color: #f8b1b0;
     color: white;
 }
 
@@ -331,9 +337,9 @@ nav {
     background-image: url('../img/professional-1.jpg');
 }
 
-.item-7 {
+/*.item-7 {
     background-image: url('../img/professional-2.jpg');
-}
+}*/
 
 .item-8 {
     background-image: url('../img/professional-3.jpg');
@@ -348,30 +354,43 @@ nav {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 24px;
+    margin-bottom: 24px;
 }
 
 .item_2 {
-    width: 200px;
-    height: 300px;
+    position: relative; 
+    width: 320px;
+    height: 430px;
     padding-bottom: 20px;
-    font-size: 0.7em;
+    font-size: 1rem;
     color: white;
+    overflow: hidden; 
+    border-radius: 24px ;
 }
 
 .item_2 p {
-    display: none;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    padding: 62px 32px 16px 16px;
+    margin: 0;
+    background: linear-gradient(to top, rgb(251, 172, 172) 0%, rgba(0, 0, 0, 0) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+    border-radius: 0;
 }
 
 .item_2:hover p {
-    display: block;
-    background-color: rgba(255, 192, 203, 0.5);
-    font-weight: bold;
+    opacity: 1; 
 }
 
-
-
 #staff {
+    background-color: #fff5ee;
+    width: 90%;
+    text-align: center;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -380,7 +399,8 @@ nav {
 
 #staff h2 {
     width: 70%;
-    font-size: 0.9em;
+    font-size: 1.5rem;
+    padding-top: 15px;
     margin: auto;
     text-align: center;
 }
@@ -389,7 +409,7 @@ nav {
 
 #contact {
     background-color: #fff5ee;
-    width: 80%;
+    width: 90%;
     text-align: center;
     margin: 20px auto;
     border-radius: 20px;
@@ -457,6 +477,8 @@ nav {
 /* -------- Locales -------- */
 
 #branch {
+    width: 90%;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
 }
