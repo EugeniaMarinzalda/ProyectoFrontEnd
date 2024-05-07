@@ -23,10 +23,16 @@ body {
 
 .back-to-home {
     display: inline-block; 
-    text-decoration: none;
+    background-color: transparent;
+    border: none;
     color:#f8b1b0;
     font-size: 24px;
+    transition: all 0.5s ease;
     
+}
+.back-to-home:hover {
+    color:  #737373;
+    opacity: 35%;
 }
 
 .form-wrapper {

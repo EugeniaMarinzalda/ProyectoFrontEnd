@@ -219,3 +219,10 @@ function validarNvoUsuario() {
     return !error;
     
 }
+function returnToHomePage() {
+    // Cerrar la ventana emergente
+    window.close();
+    // Redirigir a la página original
+    window.opener.location.reload(); // Actualiza la página original
+    return false; // Previene que el botón haga otra acción después de cerrar la ventana emergente
+}
