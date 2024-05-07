@@ -54,9 +54,13 @@ header {
     z-index: 2;
 }
 
-.logo {
-    max-width: 15rem;
-}
+header .logo {
+   
+    width: 200px;
+    margin-right: auto; /* Agrega un margen derecho automático para empujar el logo a la izquierda */
+ }
+
+
 
 nav {
     overflow: hidden;
@@ -194,7 +198,7 @@ nav {
 
 /* --------Seccion Introduccion--------*/
 
-.Home {
+.home {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -285,7 +289,7 @@ nav {
     width: 95%;
     margin-left: 5%;
     height: auto;
-    margin-bottom: 100px;
+    margin-bottom: 32px;
 }
 
 #text-servi {
@@ -319,15 +323,14 @@ nav {
     /* centro horizontalmente */
     align-items: center;
     /* centro verticalmente */
-    margin: auto;
+    margin: 15px;
     margin-bottom: 20px;
     width: 100%;
 }
 
-/* --------seccion Sobre nosotros-------- */
-
-
-/* --------seccion beneficios-------- */
+#container-btn :last-child{
+    margin-right: 16px;
+}
 
 
 /* --------seccion profesionales-------- */
@@ -387,7 +390,7 @@ nav {
 }
 
 #staff {
-    background-color: #fff5ee;
+    background-color: #ffffff;
     width: 90%;
     text-align: center;
     margin: 30px auto;

@@ -17,6 +17,17 @@ body {
     background-color: #fee2e2;
 }
 
+.back-to-home-container {
+    text-align: right; 
+}
+
+.back-to-home {
+    display: inline-block; 
+    text-decoration: none;
+    color:#f8b1b0;
+    font-size: 24px;
+    
+}
 
 .form-wrapper {
     max-width: 400px;
@@ -31,6 +42,7 @@ body {
     margin-bottom: 10px;
     overflow: hidden; 
 }
+
 
 input[type="text"],
 input[type="email"],
