@@ -79,32 +79,48 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
-/*Seccion contato*/
+/*Seccion contacto*/
 var form = document.querySelector('#form');
 var btnContact = document.querySelector('#btn-contact');
 var msj = document.querySelector('#msj')
 var btnMsj = document.querySelector('#btn-msj');
-btnMsj.style.display = 'none';
+var msjBox = document.querySelector('#msj-box');
+msjBox.style.display = 'none';
+var allFieldsCompleted = true;
 
 btnContact.onclick = () => {
     event.preventDefault();
-    msj.innerHTML = `<p>Contacto realizador satisfactoriamente a nombre de:</p>
+    
+    for (var element of form.elements) {
+         if (element.type !== "submit" && element.value === "" && element.type !== "reset"){
+             allFieldsCompleted = false;
+             break;
+         }   
+        
+    }
+    
+    if(allFieldsCompleted){
+        msj.innerHTML = `<p>Contacto realizador satisfactoriamente a nombre de:</p>
         <span>${document.querySelector('#lastname').value},</span>
         <span>${document.querySelector('#firstname').value}</span>
         <p>${document.querySelector('#email').value}</p>
         `;
+        msjBox.style.display = 'block';
+        
+    } else {
+        msj.innerHTML = `<p> Debe completar todos los campos </p>`;
+        msjBox.style.display = 'block';
+    }
+    
 
     for (var element of form.elements) {
         element.value = '';
     };
 
-    btnMsj.style.display = 'block';
-
 };
 
 btnMsj.onclick = () => {
-    msj.style.display = 'none';
-    btnMsj.style.display = 'none';
+    msjBox.style.display = 'none';
 }
  /*Registro*/
 
