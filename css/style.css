@@ -133,6 +133,15 @@ nav {
 
 }
 
+/* estilos msj informativo de contacto */
+
+#msj{
+    border: 2px solid black;
+    color: white;
+    background-color: red;
+    border-radius: 4px;
+}
+
 @media screen and (max-width:600px) {
 
     header,
@@ -696,12 +705,3 @@ footer {
     filter: hue-rotate(90deg);
     
 }
-
-
-/* estilos msj informativo de contacto */
-
-#msj-box{
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid red;    
-    }

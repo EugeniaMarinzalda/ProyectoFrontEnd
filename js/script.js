@@ -79,49 +79,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
 /*Seccion contacto*/
 var form = document.querySelector('#form');
 var btnContact = document.querySelector('#btn-contact');
-var msj = document.querySelector('#msj')
-var btnMsj = document.querySelector('#btn-msj');
-var msjBox = document.querySelector('#msj-box');
-msjBox.style.display = 'none';
-var allFieldsCompleted = true;
+var msj = document.querySelector('#msj');
+
+for (var element of form.elements) {
+        element.value = '';
+};
 
 btnContact.onclick = () => {
     event.preventDefault();
+    var firtName =  document.querySelector('#firstname').value;
+    var lastName = document.querySelector('#lastname').value;
+    var email = document.querySelector('#email').value;
     
-    for (var element of form.elements) {
-         if (element.type !== "submit" && element.value === "" && element.type !== "reset"){
-             allFieldsCompleted = false;
-             break;
-         }   
-        
-    }
+    var condition = (firtName == '' || email == '' || lastName == '');
     
-    if(allFieldsCompleted){
-        msj.innerHTML = `<p>Contacto realizador satisfactoriamente a nombre de:</p>
-        <span>${document.querySelector('#lastname').value},</span>
-        <span>${document.querySelector('#firstname').value}</span>
-        <p>${document.querySelector('#email').value}</p>
-        `;
-        msjBox.style.display = 'block';
-        
+    if(!condition){
+        alert('Operacion realizada satisfactoriamente');
+        location.reload();
     } else {
-        msj.innerHTML = `<p> Debe completar todos los campos </p>`;
-        msjBox.style.display = 'block';
-    }
-    
-
-    for (var element of form.elements) {
-        element.value = '';
+        msj.textContent = 'Debe completar todos los campos';
     };
-
+     
 };
 
-btnMsj.onclick = () => {
-    msjBox.style.display = 'none';
-}
  /*Registro*/
 
 function redireccionar() {
