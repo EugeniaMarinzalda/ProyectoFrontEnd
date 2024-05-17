@@ -57,22 +57,14 @@ header {
 header .logo {
    
     width: 200px;
-    margin-right: auto; /* Agrega un margen derecho automático para empujar el logo a la izquierda */
+    margin-right: auto; 
  }
-
 
 
 nav {
     overflow: hidden;
 }
 
-/*.botonregistro {
-    display: flex;
-    margin: 1rem;
-    padding: 1rem;
-    font-size: 2%;
-
-}*/
 .login-text{
     color: #ffffff;
 }
@@ -206,104 +198,57 @@ nav {
 }
 
 /* --------Seccion Introduccion + Seccion Jorge--------*/
-
-#grid-contenedor {
-    /*background-color: rgb(255, 255, 255);*/
-    background-color: #fff5ee;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 30px 10px;
-    width: 95%;
-    margin-left: 5%;
-    height: auto;
-    margin-bottom: 32px;
-}
-
-
-#ver-tratamientos {
-    margin: 5px;
-    width: 115px;
-    border-radius: 40px;
-    background-color: #f8b1b0;
-    color: #fff;
-    text-align: center;
-    padding: 6px 12px;
-    font-size: 1rem;
-    outline: none;
-    border: 0;
-    display: grid;
-    flex-direction: column;
-}
-
-#intro {
-    margin: 5px;
-    width: 30%;
-    height: 35px;
-    border-radius: 40px;
-    background-color: #f6b4b1;
-    color: #ffffff;
-    text-align: center;
-    padding: 6px 12px;
-    font-size: 0.6em;
-    outline: none;
-    border: 0;
-    display: grid;
-    flex-direction: column;
-}
-
-
-#parrafo-intro {
-    width: 90%;
-    height: 300px;
-    /*background-color: white;*/
-    color: #000000;
-    text-align: justify;
-    padding: px 3px;
-    font-size: 0.6rem;
-    border: 0;
-    display: grid;
-    flex-direction: column;
-}
-#h1 {
-    text-align: left;
-    font-size: 20px;
-}
-
-#texto-intro{
-    font-size: 16px;
-    text-align: left;
-}
-
-#grid-intro {
-    display: grid;
-    flex-direction: column;
-    grid-template-columns: auto;
-    margin-bottom: 24px;
-    background-color: #fff5ee;
-    width: 90%;
-    margin: 20px auto;
-    border-radius: 20px;
-    padding: 20px;
-    background-image: url('foto-intro.png');
-} 
-
- #container-introduccion {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 24px;
-}
-.home {
+.container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: auto;
-    gap: 50px;
-    margin: 0 36px 10px;
+    width: 90%;
+    text-align: center;
+    margin: 20px auto 30px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
+.texto, .imagen-home {
+    flex: 1 1 100%;
+}
+
+.imagen-home {
+    margin-top: 20px; 
+}
+
+@media (min-width: 768px) {
+    .texto, .imagen-home {
+        flex: 1;
+    }
+
+    .imagen-home {
+        margin-left: 20px; 
+        margin-top: 0;
+    }
+}
+
+#nombreHome{
+    font-size: 1rem;
+    background-color: #f6b4b1;
+    text-align: center;
+    color: #fff;
+    border-radius: 35px;
+    max-width: 200px;
+    padding: .5rem;
+}
+#tituloHome{
+    font-size: 2.5rem;
+    text-align: left;
+}
+#textoHome{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #797777;
+    text-align: left;
+    
+    
+}
 
 /* --------seccion servicios-------- */
 
@@ -435,9 +380,6 @@ nav {
     background-image: url('../img/professional-1.jpg');
 }
 
-/*.item-7 {
-    background-image: url('../img/professional-2.jpg');
-}*/
 
 .item-8 {
     background-image: url('../img/professional-3.jpg');
@@ -646,13 +588,9 @@ footer {
 
 .container-footer {
     width: 100%;
-    /* Extender el contenedor por todo el ancho de la pantalla */
     padding: 0 15px;
-    /* Agregar relleno a los lados para mantener el contenido dentro del contenedor */
     box-sizing: border-box;
-    /* Incluir el relleno en el ancho del contenedor */
     margin: 0 auto;
-    /* Centrar horizontalmente el contenido */
     max-width: 1200px;
 
 }
@@ -694,7 +632,6 @@ footer {
     margin-bottom: 25px;
     font-weight: 500;
     border-bottom: 2px solid oldlace;
-    /*esto es la línea que subraya los titulos*/
     padding-bottom: 10px;
     display: inline-block;
 }
@@ -737,7 +674,6 @@ footer {
     background-color: #ffffff;
     padding: 30px 30px 0 30px;
     border-top-left-radius: 10px;
-    /* Radio para la esquina superior izquierda */
     border-top-right-radius: 10px;
 }
 
@@ -767,7 +703,6 @@ footer {
     justify-content: center;
     padding: 15px 0;
     border-bottom-left-radius: 10px;
-    /* Radio para la esquina superior izquierda */
     border-bottom-right-radius: 10px;
 
 }
@@ -790,4 +725,150 @@ footer {
     height: auto;
     filter: hue-rotate(90deg);
     
+}
+.contenedorT{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animarFondo 10s infinite alternate;
+  
+}
+@keyframes animarFondo {
+    0% {
+      background-position: 0% 0%; 
+    }
+    100% {
+      background-position: 100% 100%; 
+    }
+  }
+
+/* -------- Tratameinto -------- */
+
+#cabezal{
+    width: 100;
+    height: 500px;
+    background-image: url(hydraco.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    fill-opacity: 0.5;
+   
+}
+
+#cabezald{
+    width: 100;
+    height: 500px;
+    background-image: url(depilacion.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    fill-opacity: 0.5;
+   
+}
+
+.hydrafacial{
+    position: relative; 
+    text-align: center;
+    color: #ffffff;
+    font-size: 5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+.hidra{
+    max-width: 800px;
+    border-radius: 35px;
+    border: 2px solid #f8b1b0;
+}
+
+.TratHidraFacial{
+    width: 90%;
+    margin: 3rem;
+   
+}
+
+.resenia{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #797777;
+    padding: 0 3rem;
+    margin-top: 1rem;
+    
+}
+
+.resenia1{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #797777;
+    
+    
+}
+
+.pasos{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #f6b4b1;
+    padding: 0 3rem;
+    font-family: 800;
+   
+
+}
+
+.tratamiento li{
+    text-decoration: none;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #f6b4b1;
+    font-family: 800;
+    margin: 0 4rem;
+}
+
+
+.subtitulo{
+    font-size: 2rem;
+    color: #f8b1b0;
+    padding: 0 3rem;
+}
+
+.turno {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+    
+}
+
+#btnReserva{
+    background-color: #f6b4b1;
+    color: #fff;
+    padding: 1rem ;
+    border-radius: 2rem;
+    margin: 2rem;
+}
+
+#btnReserva:hover{
+    background-color: #7e7e7e;
+    color: #fff;
+    padding: 1rem ;
+    border-radius: 2rem;
+    margin: 2rem;
+}
+    
+#pedirTurno{
+    font-size: 2rem;
+    color: #f6b4b1;
+    transition:  transform color 0.3s ease;
+
+}
+#pedirTurno:hover{
+    color: #06b242;
+   
+
 }
