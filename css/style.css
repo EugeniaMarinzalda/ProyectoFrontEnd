@@ -127,12 +127,6 @@ nav {
 
 /* estilos msj informativo de contacto */
 
-#msj{
-    border: 2px solid black;
-    color: white;
-    background-color: red;
-    border-radius: 4px;
-}
 
 @media screen and (max-width:600px) {
 
@@ -470,6 +464,7 @@ nav {
 #contact input[type="text"],
 #contact input[type="date"],
 #contact input[type="email"],
+#contact select,
 #contact textarea {
     width: 100%;
     padding: 8px;

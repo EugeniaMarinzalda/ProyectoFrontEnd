@@ -83,37 +83,75 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /*Seccion contacto*/
 var form = document.querySelector('#form');
 var btnContact = document.querySelector('#btn-contact');
-var msj = document.querySelector('#msj');
 
-for (var element of form.elements) {
-        element.value = '';
-};
 
-btnContact.onclick = () => {
+
+
+btnContact.onclick = (event) => {
     event.preventDefault();
-    var firtName =  document.querySelector('#firstname').value;
-    var lastName = document.querySelector('#lastname').value;
-    var email = document.querySelector('#email').value;
-    
-    var condition = (firtName == '' || email == '' || lastName == '');
-    
-    if(!condition){
-        alert('Operacion realizada satisfactoriamente');
-        location.reload();
+    var errors = [];
+
+    var firstName = document.querySelector('#firstname').value.trim();
+    var lastName = document.querySelector('#lastname').value.trim();
+    if (firstName === '' || lastName === '') {
+        errors.push('El nombre y el apellido son obligatorios');
+    }
+
+    var birthdate = new Date(document.querySelector('#birthdate').value.trim());
+    if (isNaN(birthdate)) {
+        errors.push('Debes seleccionar una fecha de nacimiento válida');
     } else {
-        msj.textContent = 'Debe completar todos los campos';
-    };
-     
+        var eighteenYearsAgo = new Date();
+        eighteenYearsAgo.setFullYear(eighteenYearsAgo.getFullYear() - 18);
+        if (birthdate >= eighteenYearsAgo) {
+            errors.push('Debes ser mayor de 18 años');
+        }
+    }
+
+    var email = document.querySelector('#email').value.trim();
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        errors.push('El correo electrónico no es válido');
+    }
+
+    var branch = document.querySelector('#sucursal').value;
+    if (branch === '') {
+        errors.push('Debes seleccionar una sucursal');
+    }
+
+    var reason = document.querySelector('input[name="reason"]:checked');
+    if (!reason) {
+        errors.push('Debes seleccionar un motivo');
+    }
+
+    var query = document.querySelector('#query').value.trim();
+    if (query === '') {
+        errors.push('Debes ingresar una consulta');
+    }
+
+    
+
+    if (errors.length === 0) {
+        document.querySelector('#msj').innerHTML = 'Operación realizada satisfactoriamente.';
+        for (var element of form.elements) {
+            element.value = '';
+        }
+    } else {
+        document.querySelector('#msj').innerHTML = errors.join(' <br> ');
+       
+    }
 };
 
- /*Registro*/
+
+
+/*Registro*/
 
 function redireccionar() {
     // Redireccionar a la página deseada
     window.location.href = "index.html";
 
-  }
-  function validar() {
+}
+function validar() {
     let usuario = document.getElementById("usuario");
     let clave = document.getElementById("clave");
     let error = false;
@@ -126,7 +164,7 @@ function redireccionar() {
         usuario.focus();
     }
 
-    
+
     if (clave.value.length < 8) {
         document.getElementById("validar_clave").innerHTML = "Debe completar el clave con 8 caracteres como mínimo";
         error = true;
@@ -154,7 +192,7 @@ function redireccionar() {
         clave.value = "";
         document.getElementById("validar_clave").innerHTML = "&nbsp;";
         redireccionar();
-        
+
     }
 
     return !error;
@@ -217,7 +255,7 @@ function validarNvoUsuario() {
 
     }
     return !error;
-    
+
 }
 function returnToHomePage() {
     // Cerrar la ventana emergente
