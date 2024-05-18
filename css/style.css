@@ -55,22 +55,24 @@ header {
 }
 
 header .logo {
-   
+
     width: 200px;
-    margin-right: auto; 
- }
+    margin-right: auto;
+}
 
 
 nav {
     overflow: hidden;
 }
 
-.login-text{
+.login-text {
     color: #ffffff;
 }
-.login-text:hover{
+
+.login-text:hover {
     color: #7e7e7e;
 }
+
 .btn {
     background-color: #f6b4b1;
     border-radius: 10px;
@@ -86,7 +88,7 @@ nav {
     list-style-type: none;
     display: flex;
     gap: 0.7rem;
-    
+
 }
 
 .nav-list a {
@@ -135,6 +137,10 @@ nav {
     footer,
     .footer {
         width: 100%;
+    }
+
+    #firstname, #lastname, #birthdate, #email, #sucursalform, #reason, #query {
+        background-color: #ffffff;
     }
 
     .abrir-menu,
@@ -203,26 +209,29 @@ nav {
     flex-wrap: wrap;
 }
 
-.texto, .imagen-home {
+.texto,
+.imagen-home {
     flex: 1 1 100%;
 }
 
 .imagen-home {
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 @media (min-width: 768px) {
-    .texto, .imagen-home {
+
+    .texto,
+    .imagen-home {
         flex: 1;
     }
 
     .imagen-home {
-        margin-left: 20px; 
+        margin-left: 20px;
         margin-top: 0;
     }
 }
 
-#nombreHome{
+#nombreHome {
     font-size: 1rem;
     background-color: #f6b4b1;
     text-align: center;
@@ -231,17 +240,19 @@ nav {
     max-width: 200px;
     padding: .5rem;
 }
-#tituloHome{
+
+#tituloHome {
     font-size: 2.5rem;
     text-align: left;
 }
-#textoHome{
+
+#textoHome {
     font-size: 1.1rem;
     line-height: 1.5;
     color: #797777;
     text-align: left;
-    
-    
+
+
 }
 
 /* --------seccion servicios-------- */
@@ -265,9 +276,9 @@ nav {
     color: black;
     text-align: bottom;
     flex-shrink: 0;
-    overflow: hidden; 
-    
-    
+    overflow: hidden;
+
+
 }
 
 .item p {
@@ -276,8 +287,8 @@ nav {
     background: linear-gradient(to top, rgb(251, 172, 172) 0%, rgba(0, 0, 0, 0) 100%);
     color: white;
     border-radius: 15px;
-    width: 100%; 
-  
+    width: 100%;
+
 }
 
 
@@ -287,7 +298,7 @@ nav {
 
 .item-1 {
     background-image: url('../img/facial1.png');
-    
+
 }
 
 .item-2 {
@@ -342,7 +353,7 @@ nav {
     border-radius: 50%;
     background-color: transparent;
     border: 2px solid #f8b1b0;
-    color:#f8b1b0;
+    color: #f8b1b0;
 }
 
 
@@ -362,7 +373,7 @@ nav {
     width: 100%;
 }
 
-#container-btn :last-child{
+#container-btn :last-child {
     margin-right: 16px;
 }
 
@@ -393,31 +404,31 @@ nav {
 }
 
 .item_2 {
-    position: relative; 
+    position: relative;
     width: 320px;
     height: 430px;
     padding-bottom: 20px;
     font-size: 1rem;
     color: white;
-    overflow: hidden; 
-    border-radius: 24px ;
+    overflow: hidden;
+    border-radius: 24px;
 }
 
 .item_2 p {
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     padding: 62px 32px 16px 16px;
     margin: 0;
     background: linear-gradient(to top, rgb(251, 172, 172) 0%, rgba(0, 0, 0, 0) 100%);
     opacity: 0;
-    transition: opacity 0.3s ease; 
+    transition: opacity 0.3s ease;
     border-radius: 0;
 }
 
 .item_2:hover p {
-    opacity: 1; 
+    opacity: 1;
 }
 
 #staff {
@@ -704,42 +715,46 @@ footer {
 
 .whatsapp-link {
     position: fixed;
-    bottom: 20px; 
-    right: 20px; 
-    z-index: 9999; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
 }
 
 .whatsapp-link img {
-    width: 70px; 
+    width: 70px;
     height: auto;
     transition: filter 0.3s ease;
-    
+
 }
+
 .whatsapp-link img:hover {
-    width: 70px; 
+    width: 70px;
     height: auto;
     filter: hue-rotate(90deg);
-    
+
 }
-.contenedorT{
+
+.contenedorT {
     display: flex;
     justify-content: center;
     align-items: center;
     animation: animarFondo 10s infinite alternate;
-  
+
 }
+
 @keyframes animarFondo {
     0% {
-      background-position: 0% 0%; 
+        background-position: 0% 0%;
     }
+
     100% {
-      background-position: 100% 100%; 
+        background-position: 100% 100%;
     }
-  }
+}
 
 /* -------- Tratameinto -------- */
 
-#cabezal{
+#cabezal {
     width: 100;
     height: 500px;
     background-image: url(hydraco.png);
@@ -747,10 +762,10 @@ footer {
     background-size: cover;
     background-position: center;
     fill-opacity: 0.5;
-   
+
 }
 
-#cabezald{
+#cabezald {
     width: 100;
     height: 500px;
     background-image: url(depilacion.png);
@@ -758,65 +773,67 @@ footer {
     background-size: cover;
     background-position: center;
     fill-opacity: 0.5;
-   
+
 }
 
-.hydrafacial{
-    position: relative; 
+.hydrafacial {
+    position: relative;
     text-align: center;
     color: #ffffff;
     font-size: 5rem;
     animation: fadeIn 2s ease-in-out;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
-        opacity: 1; 
+        opacity: 1;
     }
 }
 
-.hidra{
+.hidra {
     max-width: 800px;
     border-radius: 35px;
     border: 2px solid #f8b1b0;
 }
 
-.TratHidraFacial{
+.TratHidraFacial {
     width: 90%;
     margin: 3rem;
-   
+
 }
 
-.resenia{
+.resenia {
     font-size: 1.1rem;
     line-height: 1.5;
     color: #797777;
     padding: 0 3rem;
     margin-top: 1rem;
-    
+
 }
 
-.resenia1{
+.resenia1 {
     font-size: 1.1rem;
     line-height: 1.5;
     color: #797777;
-    
-    
+
+
 }
 
-.pasos{
+.pasos {
     font-size: 1.1rem;
     line-height: 1.5;
     color: #f6b4b1;
     padding: 0 3rem;
     font-family: 800;
-   
+
 
 }
 
-.tratamiento li{
+.tratamiento li {
     text-decoration: none;
     font-size: 1.1rem;
     line-height: 1.5;
@@ -826,7 +843,7 @@ footer {
 }
 
 
-.subtitulo{
+.subtitulo {
     font-size: 2rem;
     color: #f8b1b0;
     padding: 0 3rem;
@@ -837,33 +854,34 @@ footer {
     justify-content: center;
     align-content: center;
     padding: 1rem;
-    
+
 }
 
-#btnReserva{
+#btnReserva {
     background-color: #f6b4b1;
     color: #fff;
-    padding: 1rem ;
+    padding: 1rem;
     border-radius: 2rem;
     margin: 2rem;
 }
 
-#btnReserva:hover{
+#btnReserva:hover {
     background-color: #7e7e7e;
     color: #fff;
-    padding: 1rem ;
+    padding: 1rem;
     border-radius: 2rem;
     margin: 2rem;
 }
-    
-#pedirTurno{
+
+#pedirTurno {
     font-size: 2rem;
     color: #f6b4b1;
-    transition:  transform color 0.3s ease;
+    transition: transform color 0.3s ease;
 
 }
-#pedirTurno:hover{
+
+#pedirTurno:hover {
     color: #06b242;
-   
+
 
 }
