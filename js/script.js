@@ -18,6 +18,11 @@ function pressBackward() {
 }
 
 
+btnForward.addEventListener('click', pressForward);
+
+btnBackward.addEventListener('click', pressBackward);
+
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
     const nav = document.querySelector("#nav");
