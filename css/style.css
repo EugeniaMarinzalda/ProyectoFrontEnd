@@ -141,6 +141,7 @@ nav {
 
     #firstname, #lastname, #birthdate, #email, #sucursalform, #query {
         background-color: #ffffff;
+        border: none;
     }
 
     .abrir-menu,
