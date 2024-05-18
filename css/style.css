@@ -784,6 +784,32 @@ footer {
     font-size: 5rem;
     animation: fadeIn 2s ease-in-out;
 }
+/* Estilo para tablets (pantallas medianas) */
+@media (max-width: 768px) {
+    #cabezald {
+        height: 400px;
+    }
+    #cabezal {
+        height: 400px;
+    }
+
+    .hydrafacial {
+        font-size: 4em;
+    }
+}
+
+/* Estilo para móviles (pantallas pequeñas) */
+@media (max-width: 680px) {
+    #cabezald {
+        height: 300px;
+    }
+    #cabezal {
+        height: 300px;
+    }
+    .hydrafacial {
+        font-size: 4em;
+    }
+}
 
 @keyframes fadeIn {
     from {

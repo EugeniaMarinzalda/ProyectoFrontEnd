@@ -18,21 +18,22 @@ function pressBackward() {
 }
 
 
-btnForward.addEventListener('click', pressForward);
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM fully loaded and parsed");
+    const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
 
-btnBackward.addEventListener('click', pressBackward);
+    abrir.addEventListener("click", () => {
+        console.log("Abrir menú clickeado");
+        nav.classList.add("visible");
+    });
 
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
-
-abrir.addEventListener("click", () => {
-    nav.classList.add("visible");
-})
-
-cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-})
+    cerrar.addEventListener("click", () => {
+        console.log("Cerrar menú clickeado");
+        nav.classList.remove("visible");
+    });
+});
 
 
 function mostrarSucursal() {
