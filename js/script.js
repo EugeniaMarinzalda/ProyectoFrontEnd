@@ -135,7 +135,10 @@ btnContact.onclick = (event) => {
         errors.push('Debes ingresar una consulta');
     }
 
-    
+    var image = document.querySelector('#image').files[0];
+    if (!image) {
+        errors.push('Debes subir una imagen');
+    }
 
     if (errors.length === 0) {
         document.querySelector('#msj').innerHTML = 'Operación realizada satisfactoriamente.';
