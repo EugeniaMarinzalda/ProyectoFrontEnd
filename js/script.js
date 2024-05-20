@@ -282,22 +282,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginLink = document.getElementById('login-link');
     const loginText = document.getElementById('login-text');
 
-    // Verificar el estado de la sesión en localStorage
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     if (isLoggedIn) {
-        // Cambiar el texto a "Cerrar Sesión"
         loginText.textContent = 'Cerrar Sesión';
-        loginLink.href = '#'; // Puedes cambiar el href a una función de cerrar sesión si es necesario
         loginLink.onclick = function () {
-            // Función para cerrar sesión
             localStorage.removeItem('isLoggedIn');
-            location.reload(); // Recargar la página para actualizar el estado
+            location.reload();
         };
     } else {
-        // Cambiar el texto a "Iniciar Sesión"
         loginText.textContent = 'Iniciar Sesión';
-        loginLink.href = 'registro.html'; // Enlace a la página de inicio de sesión
+        loginLink.href = 'registro.html';
     }
 });
 

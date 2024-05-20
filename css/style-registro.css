@@ -126,9 +126,13 @@ input[type="password"]::placeholder {
     border: 2px solid  #f8b1b0 ;
  }
 
-.volver{
+
+.form-volver {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.volver{
     background-color: #fff;
     color: #f8b1b0;
     border: none;
