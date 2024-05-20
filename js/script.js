@@ -160,6 +160,7 @@ function redireccionar() {
     window.location.href = "index.html";
 
 }
+
 function validar() {
     let usuario = document.getElementById("usuario");
     let clave = document.getElementById("clave");
@@ -200,6 +201,7 @@ function validar() {
         document.getElementById("validar_usuario").innerHTML = "&nbsp;";
         clave.value = "";
         document.getElementById("validar_clave").innerHTML = "&nbsp;";
+        localStorage.setItem('isLoggedIn', true);
         redireccionar();
 
     }
@@ -260,9 +262,11 @@ function validarNvoUsuario() {
         document.getElementById("validar_usuarioNvo").innerHTML = "&nbsp;";
         claveNva.value = "";
         document.getElementById("validar_claveNva").innerHTML = "&nbsp;";
+        localStorage.setItem('isLoggedIn', true);
         redireccionar();
 
     }
+
     return !error;
 
 }
@@ -273,3 +277,28 @@ function returnToHomePage() {
     window.opener.location.reload(); // Actualiza la página original
     return false; // Previene que el botón haga otra acción después de cerrar la ventana emergente
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const loginLink = document.getElementById('login-link');
+    const loginText = document.getElementById('login-text');
+
+    // Verificar el estado de la sesión en localStorage
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if (isLoggedIn) {
+        // Cambiar el texto a "Cerrar Sesión"
+        loginText.textContent = 'Cerrar Sesión';
+        loginLink.href = '#'; // Puedes cambiar el href a una función de cerrar sesión si es necesario
+        loginLink.onclick = function () {
+            // Función para cerrar sesión
+            localStorage.removeItem('isLoggedIn');
+            location.reload(); // Recargar la página para actualizar el estado
+        };
+    } else {
+        // Cambiar el texto a "Iniciar Sesión"
+        loginText.textContent = 'Iniciar Sesión';
+        loginLink.href = 'registro.html'; // Enlace a la página de inicio de sesión
+    }
+});
+
+

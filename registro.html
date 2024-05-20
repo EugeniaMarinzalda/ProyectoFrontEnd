@@ -12,30 +12,30 @@
 </head>
 
 <body>
-    
+
     <section class="form-wrapper">
         <div class="back-to-home-container">
-            
+
             <button onclick="returnToHomePage()" class="back-to-home"><i class="fa-solid fa-circle-xmark"></i></button>
         </div>
 
-        
+
         <form id="registroForm" onsubmit="return validarNvoUsuario();">
-           
+
             <h2>Registro de Usuario</h2> <br>
             <div class="form-control">
                 <input type="text" id="usuarioNvo" name="usuarioNvo" placeholder="Nombre de usuario" value=""><br>
-                <div id="validar_usuarioNvo" style="color:#737373; font-size: 12px" >&nbsp; </div>
+                <div id="validar_usuarioNvo" style="color:#737373; font-size: 12px">&nbsp; </div>
             </div>
 
             <div class="form-control">
                 <input type="email" id="email" name="email" placeholder="Correo electrónico" value=""><br>
-                <div id="validar_mail" style="color:#737373; font-size: 12px" >&nbsp; </div>
+                <div id="validar_mail" style="color:#737373; font-size: 12px">&nbsp; </div>
             </div>
 
             <div class="form-control">
                 <input type="password" id="claveNva" name="claveNva" placeholder="Contraseña" value=""><br>
-                <div id="validar_claveNva" style="color:#737373; font-size: 12px;" >&nbsp; </div>
+                <div id="validar_claveNva" style="color:#737373; font-size: 12px;">&nbsp; </div>
             </div>
             <div class="form-control">
                 <input type="password" id="confirmClave" name="confirmClave" placeholder="Confirmar contraseña"
@@ -43,8 +43,8 @@
                 <div id="validar_confirmClave" style="color:#737373; font-size: 12px"> &nbsp; </div>
             </div>
 
-          <input class="registrarse"  type='submit' value="Registrarse"></td>
-            
+            <input class="registrarse" type='submit' value="Registrarse"></td>
+
         </form><br>
 
 
@@ -67,10 +67,12 @@
                 </div><br>
             </div>
             <input class="registrarse" type='submit' value='Enviar'></td>
-            
+            <div>
+                <input class="volver" type='button' value="Volver">
+            </div>
 
             <div class="form-help">
-                <a href="#">Necesitas ayuda?</a>
+                <a href="./index.html#contact">Necesitas ayuda?</a>
             </div>
         </form>
 

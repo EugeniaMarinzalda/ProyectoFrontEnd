@@ -125,3 +125,21 @@ input[type="password"]::placeholder {
     color: #f8b1b0;
     border: 2px solid  #f8b1b0 ;
  }
+
+.volver{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    color: #f8b1b0;
+    border: none;
+    border-radius: 35px;
+    padding: 10px 15px;
+    font-size: 14px;
+    transition: all .5s ease;
+}
+ .volver:hover{
+    background-color: #f8b1b0;
+    color: #fff;
+    border: 2px solid  #f8b1b0 ;
+ }
+
