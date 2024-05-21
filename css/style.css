@@ -939,3 +939,26 @@ footer {
 
 
 }
+
+
+   /* Estilos para dispositivos móviles */
+   @media screen and (max-width: 768px) {
+    #carousel-container {
+        overflow: hidden;
+        max-width: 100%;
+    }
+    #carousel {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* Suave en iOS */
+        scroll-behavior: smooth; /* Suave en otros navegadores */
+    }
+    .item {
+        flex: 0 0 auto;
+        width: 100%;
+        scroll-snap-align: start;
+        padding: 1rem; /* Distancia entre elementos */
+        text-align: center;
+    }
+}
