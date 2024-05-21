@@ -1,3 +1,5 @@
+/*Carousel de servicios/ tratamientos*/
+
 const btnForward = document.getElementById('forward');
 const btnBackward = document.getElementById('backward');
 
@@ -22,24 +24,23 @@ btnForward.addEventListener('click', pressForward);
 
 btnBackward.addEventListener('click', pressBackward);
 
+/*Menu hamburguesa*/
 
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOM fully loaded and parsed");
+document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector("#nav");
     const abrir = document.querySelector("#abrir");
     const cerrar = document.querySelector("#cerrar");
 
     abrir.addEventListener("click", () => {
-        console.log("Abrir menú clickeado");
         nav.classList.add("visible");
     });
 
     cerrar.addEventListener("click", () => {
-        console.log("Cerrar menú clickeado");
         nav.classList.remove("visible");
     });
 });
 
+/* Locales */
 
 function mostrarSucursal() {
     var sucursalSeleccionada = document.getElementById("sucursal").value;
@@ -66,32 +67,10 @@ window.onload = mostrarSucursal;
 
 document.getElementById("sucursal").addEventListener("change", mostrarSucursal);
 
-/*Para solucionar el desplazamiento del scroll por el header fijo*/
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+/* Seccion contacto */
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const targetPosition = targetElement.offsetTop - headerHeight;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-/*Seccion contacto*/
 var form = document.querySelector('#form');
 var btnContact = document.querySelector('#btn-contact');
-
-
-
 
 btnContact.onclick = (event) => {
     event.preventDefault();
@@ -147,7 +126,7 @@ btnContact.onclick = (event) => {
         }
     } else {
         document.querySelector('#msj').innerHTML = errors.join(' <br> ');
-       
+
     }
 };
 
@@ -270,6 +249,7 @@ function validarNvoUsuario() {
     return !error;
 
 }
+
 function returnToHomePage() {
     // Cerrar la ventana emergente
     window.close();
@@ -277,6 +257,9 @@ function returnToHomePage() {
     window.opener.location.reload(); // Actualiza la página original
     return false; // Previene que el botón haga otra acción después de cerrar la ventana emergente
 }
+
+
+/*Para cambiar el boton de registro de sesión*/
 
 document.addEventListener('DOMContentLoaded', function () {
     const loginLink = document.getElementById('login-link');
@@ -296,4 +279,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+/* Para arreglar el scroll */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            const headerHeight = document.querySelector('header-container').offsetHeight;
+            const targetPosition = targetElement.offsetTop - headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
