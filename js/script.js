@@ -279,22 +279,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-/* Para arreglar el scroll */
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+/* Desplazamiento del scroll ajustado por header siempre que este en página index.html*/
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.getElementById('header-container');
+    const headerHeight = header.offsetHeight;
+    //console.log('Altura del header:', headerHeight);
 
-        if (targetElement) {
-            const headerHeight = document.querySelector('header-container').offsetHeight;
-            const targetPosition = targetElement.offsetTop - headerHeight;
+    document.querySelectorAll('a[href^="#"]').forEach(ubicacion => {
+        ubicacion.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
+            if (targetElement) {
+                const targetPosition = targetElement.offsetTop - headerHeight;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 });
+

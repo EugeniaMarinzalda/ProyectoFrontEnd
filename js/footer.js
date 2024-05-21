@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="footer-links">
                 <h4>Contenido</h4>
                 <ul>
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#sec-servi">Tratamientos</a></li>
-                    <li><a href="index.html#staff">Profesionales</a></li>
-                    <li><a href="index.html#contact">Contactanos</a></li>
-                    <li><a href="index.html#branch">Locales</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sec-servi">Tratamientos</a></li>
+                    <li><a href="#staff">Profesionales</a></li>
+                    <li><a href="#contact">Contáctanos</a></li>
+                    <li><a href="#branch">Locales</a></li>
                 </ul>
             </div>
 

@@ -470,7 +470,7 @@ nav {
     text-align: left;
 }
 
-/* -------- Contactanos -------- */
+/* -------- Contáctanos -------- */
 
 #contact {
     background-color: #fff5ee;
@@ -483,6 +483,7 @@ nav {
 
 #contact h2 {
     padding-bottom: 10px;
+    padding-top: 10px;
     text-align: left;
 }
 
