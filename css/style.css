@@ -817,6 +817,9 @@ footer {
     .hydrafacial {
         font-size: 4em;
     }
+    .item_2 p {
+    opacity: 1;
+    }
 }
 
 /* Estilo para móviles (pantallas pequeñas) */
@@ -829,6 +832,9 @@ footer {
     }
     .hydrafacial {
         font-size: 4em;
+    }
+    .item_2 p {
+    opacity: 1;
     }
 }
 
