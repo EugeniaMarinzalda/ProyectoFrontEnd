@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <p id="reseña">Beauty Spa ofrece tratamientos personalizados para el cuidado de la piel. 
                     Analizamos cuidadosamente tu piel para brindarte soluciones personalizadas.</p>
                 </div>
-            </div>
+                
             <div class="footer-links">
                 <h4>Tratamientos</h4>
                 <ul>
