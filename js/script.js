@@ -282,24 +282,24 @@ document.addEventListener('DOMContentLoaded', function () {
 /* Desplazamiento del scroll ajustado por header siempre que este en página index.html*/
 
 document.addEventListener('DOMContentLoaded', function () {
-    const header = document.getElementById('header-container');
-    const headerHeight = header.offsetHeight;
-    //console.log('Altura del header:', headerHeight);
+    const header = document.querySelector('header');
+    const headerHeight = header ? header.offsetHeight : 0;
 
-    document.querySelectorAll('a[href^="#"]').forEach(ubicacion => {
-        ubicacion.addEventListener('click', function (e) {
+    document.querySelectorAll('a[href^="index.html#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+            const targetId = this.getAttribute('href').split('#')[1];
 
-            if (targetElement) {
-                const targetPosition = targetElement.offsetTop - headerHeight;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+            if (targetId) {
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
 });
-

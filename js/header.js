@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const headerContainer = document.getElementById('header-container');
+    const headerContainer = document.getElementById( 'header-container' );
 
     const headerHtml = `
         <a href="index.html">
