@@ -912,7 +912,7 @@ footer {
 
 }
 
-#btnReserva {
+#btnReserva, #btnVolver:hover {
     background-color: #f6b4b1;
     color: #fff;
     padding: 1rem;
@@ -920,7 +920,7 @@ footer {
     margin: 2rem;
 }
 
-#btnReserva:hover {
+#btnReserva:hover, #btnVolver {
     background-color: #7e7e7e;
     color: #fff;
     padding: 1rem;
