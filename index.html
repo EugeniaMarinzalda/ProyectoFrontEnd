@@ -4,35 +4,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estetica</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>BeautySpa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/script.js">
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <nav>
+    
+    <header id="header-container" class="header-container"></header>
 
-            </nav>
-        </header>
-        <main class="main">
-            <h1>Estetica</h1>
-            <h2>Servicios</h2>
-        </main>
-        <div class="local">
-            <h2>Local</h2>
-        </div>
-        <div class="about">
-            <h2>Sobre Nosotros</h2>
-        </div>
-        <div class="goals">
-            <h2>Beneficios</h2>
-        </div>
-        <div class="staff">
-            <h2>Profesionales</h2>
-        </div>
-        <footer class="footer">footer</footer>
-    </div>
+    <main>
+
+        <section id="home" class="container">
+            <div class="texto">
+                <h1 id="tituloHome">Tratamiento de lujo para el cuidado de la piel.</h1><br><br>
+                <p id="textoHome">Beauty Spa ofrece tratamientos <br>personalizados para el
+                    cuidado de la piel. <br>Analizamos
+                    cuidadosamente tu piel para ofrecerte <br>soluciones personalizadas.</p>
+            </div>
+            <div class="imagen-home">
+                <img style="width: 400px;" src="./img/foto1.png"
+                    alt="rostro de mujer relajada y feliz con masaje facial">
+            </div>
+        </section>
+
+        <section id="sec-servi">
+           
+            <div id="container-btn">
+
+                <div>
+                    <h2>Nuestros Servicios</h2>
+                </div>
+
+                <div>
+
+                    <button id="backward" class="btn-style">←</button>
+                    <button id="forward" class="btn-style">→</button>
+
+                </div>
+
+            </div>
+            <div id="carousel-container">
+                <div id="carousel">
+                    <a href="tratamiento.html" class="item item-1">
+                        <p style="font-size: 1rem; padding-top: 3rem;">Hydrafacial</p>
+                    </a>
+                    <a href="depilacion.html" class="item item-2">
+                        <p style="font-size: 1rem; padding-top: 3rem;">Depilación Laser</p>
+                    </a>
+                    <a href="index.html" class="item item-3"> <!--Proximamente-->
+                        <p style="font-size: 1rem; padding-top: 3rem;">Relleno Facial</p>
+                    </a>
+                    <a href="index.html" class="item item-4"> <!--Proximamente-->
+                        <p style="font-size: 1rem; padding-top: 3rem;">Tratamiento reflexógeno</p>
+                    </a>
+                    <a href="index.html" class="item item-5"> <!--Proximamente-->
+                        <p style="font-size: 1rem; padding-top: 3rem;">Radiofrecuencia</p>
+                    </a>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+        <section id="staff">
+            
+            <h2>El equipo médico está comprometido a brindar atención experta</h2>
+
+            <div id="container-professionals">
+                <div class="item item-6 item_2">
+                    <p>Dra. Mercado Sandra</p>
+                </div>
+
+
+                <div class="item item-8 item_2">
+                    <p>Dra. Quinteros Rocio</p>
+                </div>
+                <div class="item item-9 item_2">
+                    <p>Dra. Gallardo Patricia</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contact">
+            <h2>Contáctanos</h2>
+            <form id="form">
+                <label for="firstname">Nombre: </label>
+                <input type="text" name="firstname" id="firstname" placeholder="Ingrese su nombre aquí...">
+                <br>
+
+                <label for="lastname">Apellido: </label>
+                <input type="text" name="lastname" id="lastname" placeholder="Ingrese su apellido aquí...">
+                <br>
+
+                <label for="birthdate">Ingrese su fecha de nacimiento: </label>
+                <input type="date" name="birthdate" id="birthdate">
+                <br>
+
+                <label for="email">Correo Electrónico: </label>
+                <input type="email" value="holamundo@gmail.com" name="email" id="email"
+                    placeholder="Ingrese su correo electrónico aquí...">
+                <br>
+
+                <label for="sucursalform">Sucursal</label>
+                <select name="sucursalform" id="sucursalform">
+                    <option value="suc-casa-central">Casa Central - CABA</option>
+                    <option value="suc-cordoba">Córdoba</option>
+                    <option value="suc-la-rioja">La Rioja</option>
+                </select>
+                <br>
+                <label>Motivo: </label>
+                <ul id="reason">
+                    <li>
+                        <input type="radio" name="reason" id="reservation" value="reservation">
+                        <label for="reservation">Pedir un turno</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="reason" id="onlineConsultation" value="onlineConsultation">
+                        <label for="onlineConsultation">Consulta online</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="reason" id="place" value="place">
+                        <label for="place">Acerca del lugar</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="reason" id="other" value="other">
+                        <label for="other">Otras consultas</label>
+                    </li>
+                </ul>
+                <br>
+
+                <label for="query">Ingrese su consulta:</label>
+                <br>
+                <textarea name="query" id="query" cols="30" rows="10"></textarea>
+                <br>
+
+                <label for="image">Puedes cargar una imagen aquí:</label>
+                <input type="file" name="image" id="image" accept="image/*">
+                <br>
+
+                <div id="msj">
+                </div>
+
+                <br>
+                <button id="btn-contact" type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </form>
+        </section>
+
+        <section id="branch">
+            <h2>Locales</h2>
+            <p>En Beauty Spa estamos orgullosos de atenderte en nuestras sucursales</p>
+            <div id="select-branch">
+                <label for="sucursal">Selecciona la sucursal más cercana: </label>
+                <select id="sucursal" name="sucursal">
+                    <option value="casa-central" selected>Casa central - CABA</option>
+                    <option value="sucursal-cordoba">Sucursal Córdoba</option>
+                    <option value="sucursal-la-rioja">Sucursal La Rioja</option>
+                </select>
+            </div>
+
+
+
+            <div id="mapa-branch">
+                <a id="enlace-mapa" href="#" target="_blank">Dirección</a>
+                <br>
+                <iframe id="mapa-iframe" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+
+        </section>
+    </main>
+
+    <footer id="footer-container" class="footer"></footer>
+
+    <div id="wa-container"></div>
+    
+
+    <script src="./js/header.js"></script>
+    <script src="./js/wa.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/script.js"></script>
+
 </body>
 
 </html>
