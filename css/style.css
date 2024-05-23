@@ -785,7 +785,7 @@ footer {
 #cabezal {
     width: 100;
     height: 500px;
-    background-image: url(hydraco.png);
+    background-image: url('../img/hydraco.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -796,7 +796,37 @@ footer {
 #cabezald {
     width: 100;
     height: 500px;
-    background-image: url(depilacion.png);
+    background-image: url('../img/depilacion.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    fill-opacity: 0.5;
+
+}
+#cabezalr {
+    width: 100;
+    height: 500px;
+    background-image: url('../img/relleno.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    fill-opacity: 0.5;
+
+}
+#cabezalreflexo {
+    width: 100;
+    height: 500px;
+    background-image: url('../img/reflexologia.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    fill-opacity: 0.5;
+
+}
+#cabezalradio {
+    width: 100;
+    height: 500px;
+    background-image: url('../img/radiofrecuencia1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
