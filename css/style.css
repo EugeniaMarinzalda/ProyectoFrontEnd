@@ -281,7 +281,7 @@ nav {
     font-size: 0.9em;
     display: flex;
     column-gap: 24px;
-    width: 80%;
+    width: 100%;
     height: auto;
     z-index: 1;
 }
@@ -363,7 +363,7 @@ nav {
 
 #carousel-container {
     overflow: hidden;
-    width: 90%;
+    width:100%;
     margin: auto;
 }
 
@@ -376,10 +376,15 @@ nav {
     color: #f8b1b0;
 }
 
-
 .btn-style:hover {
     background-color: #f8b1b0;
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    #container-flechas {
+        display: none;
+    }
 }
 
 #container-btn {
@@ -952,7 +957,6 @@ footer {
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch; /* Suave en iOS */
         scroll-behavior: smooth; /* Suave en otros navegadores */
     }
     .item {
