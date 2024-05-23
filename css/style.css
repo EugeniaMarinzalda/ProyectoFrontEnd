@@ -976,9 +976,8 @@ footer {
 
 }
 
-
-   /* Estilos para dispositivos móviles */
-   @media screen and (max-width: 768px) {
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
     #carousel-container {
         overflow: hidden;
         max-width: 100%;
@@ -987,13 +986,26 @@ footer {
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        scroll-behavior: smooth; /* Suave en otros navegadores */
+        scroll-behavior: smooth; 
     }
     .item {
         flex: 0 0 auto;
-        width: 100%;
+        width: 100%; 
         scroll-snap-align: start;
-        padding: 1rem; /* Distancia entre elementos */
+        padding: 1rem; 
+        position: relative; 
         text-align: center;
     }
+    .item p {
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem; 
+         
+    }
 }
+
+
+
