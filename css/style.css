@@ -838,7 +838,7 @@ footer {
     position: relative;
     text-align: center;
     color: #ffffff;
-    font-size: 5rem;
+    font-size: 4em;
     animation: fadeIn 2s ease-in-out;
 }
 /* Estilo para tablets (pantallas medianas) */
@@ -851,7 +851,7 @@ footer {
     }
 
     .hydrafacial {
-        font-size: 4em;
+        font-size: 3em;
     }
     .item_2 p {
     opacity: 1;
@@ -867,7 +867,7 @@ footer {
         height: 300px;
     }
     .hydrafacial {
-        font-size: 4em;
+        font-size:2.4em;
     }
     .item_2 p {
     opacity: 1;
