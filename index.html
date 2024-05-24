@@ -81,18 +81,12 @@
             
             <h2>El equipo médico está comprometido a brindar atención experta</h2>
 
-            <div id="container-professionals">
-                <div class="item item-6 item_2">
-                    <p>Dra. Mercado Sandra</p>
+            <div v-for="item in items" id="container-professionals">
+       
+                <div :style="backgroundImg(item.img)" class="item item_2">
+                    <p>{{item.name}}</p>
                 </div>
-
-
-                <div class="item item-8 item_2">
-                    <p>Dra. Quinteros Rocio</p>
-                </div>
-                <div class="item item-9 item_2">
-                    <p>Dra. Gallardo Patricia</p>
-                </div>
+                
             </div>
 
         </section>
@@ -193,11 +187,12 @@
 
     <div id="wa-container"></div>
     
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/wa.js"></script>
     <script src="./js/footer.js"></script>
     <script src="./js/script.js"></script>
+    <script src="js/vue.js"></script>
 
 </body>
 
