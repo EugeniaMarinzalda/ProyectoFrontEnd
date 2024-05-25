@@ -405,20 +405,6 @@ nav {
 
 /* --------seccion profesionales-------- */
 
-
-.item-6 {
-    background-image: url('../img/professional-1.jpg');
-}
-
-
-.item-8 {
-    background-image: url('../img/professional-3.jpg');
-}
-
-.item-9 {
-    background-image: url('../img/professional-4.jpg');
-}
-
 #container-professionals {
     display: flex;
     flex-direction: row;
@@ -429,31 +415,26 @@ nav {
 }
 
 .item_2 {
-    position: relative;
-    width: 320px;
-    height: 430px;
-    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 420px;
+    height: 530px;
     font-size: 1rem;
-    color: white;
-    overflow: hidden;
+    background-size: cover;
     border-radius: 24px;
+}
+.item_2:hover {
+    border: 2.5px solid pink;
 }
 
 .item_2 p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 62px 32px 16px 16px;
-    margin: 0;
-    background: linear-gradient(to top, rgb(251, 172, 172) 0%, rgba(0, 0, 0, 0) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 0;
-}
-
-.item_2:hover p {
-    opacity: 1;
+text-align: center;
+margin: 0p;
+background: linear-gradient(to top, rgb(251, 172, 172) 0%, rgba(0, 0, 0, 0) 100%);
+color: white;
+border-radius: 15px;
+width: 96%;
 }
 
 #staff {
@@ -474,6 +455,7 @@ nav {
     margin: 16px;
     text-align: left;
 }
+
 
 /* -------- Contáctanos -------- */
 
@@ -696,7 +678,7 @@ footer {
     .footer-links {
         width: 100%;
         margin-bottom: 30px;
-    }
+    }   
 }
 
 .social-media {
@@ -853,8 +835,8 @@ footer {
     .hydrafacial {
         font-size: 3em;
     }
-    .item_2 p {
-    opacity: 1;
+    .item_2 {
+    border: 2.5px solid pink;
     }
 }
 
@@ -869,8 +851,8 @@ footer {
     .hydrafacial {
         font-size:2.4em;
     }
-    .item_2 p {
-    opacity: 1;
+    .item_2 {
+    border: 2.5px solid pink;
     }
 }
 
