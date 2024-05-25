@@ -418,8 +418,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    width: 420px;
-    height: 530px;
+    width: 320px;
+    height: 430px;
     font-size: 1rem;
     background-size: cover;
     border-radius: 24px;
@@ -433,8 +433,9 @@ text-align: center;
 margin: 0p;
 background: linear-gradient(to top, rgb(251, 172, 172) 0%, rgba(0, 0, 0, 0) 100%);
 color: white;
-border-radius: 15px;
-width: 96%;
+border-radius: 24px;
+width: 100%;
+padding: 20px;
 }
 
 #staff {
