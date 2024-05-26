@@ -422,7 +422,7 @@ nav {
     height: 430px;
     font-size: 1rem;
     background-size: cover;
-    border-radius: 24px;
+    border-radius: 26px;
 }
 .item_2:hover {
     border: 2.5px solid pink;
@@ -436,6 +436,12 @@ color: white;
 border-radius: 24px;
 width: 100%;
 padding: 20px;
+opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+.item_2:hover p {
+    opacity: 1;
 }
 
 #staff {
@@ -839,6 +845,9 @@ footer {
     .item_2 {
     border: 2.5px solid pink;
     }
+    .item_2 p {
+        opacity: 1;
+        }
 }
 
 /* Estilo para móviles (pantallas pequeñas) */
@@ -855,6 +864,9 @@ footer {
     .item_2 {
     border: 2.5px solid pink;
     }
+    .item_2 p {
+        opacity: 1;
+        }
 }
 
 @keyframes fadeIn {
