@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 <ul>
                     <li><a href="tratamiento.html">Hydrafacial</a></li>
                     <li><a href="depilacion.html">Depilación Laser</a></li>
-                    <li><a href="index.html">Relleno Facial</a></li>   <!--Proximamente-->
-                    <li><a href="index.html">Otras</a></li> <!--Proximamente-->
+                    <li><a href="relleno.html">Relleno Facial</a></li> 
+                    <li><a href="reflexologia.html">Tratamiento Reflexogeno</a></li> 
+                    <li><a href="radiofrecuencia.html">Radiofrecuencia</a></li> 
                 </ul>
             </div>
 

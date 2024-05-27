@@ -44,7 +44,7 @@
                     <h2>Nuestros Servicios</h2>
                 </div>
 
-                <div>
+                <div id="container-flechas">
 
                     <button id="backward" class="btn-style">←</button>
                     <button id="forward" class="btn-style">→</button>
@@ -60,13 +60,13 @@
                     <a href="depilacion.html" class="item item-2">
                         <p style="font-size: 1rem; padding-top: 3rem;">Depilación Laser</p>
                     </a>
-                    <a href="index.html" class="item item-3"> <!--Proximamente-->
+                    <a href="relleno.html" class="item item-3"> 
                         <p style="font-size: 1rem; padding-top: 3rem;">Relleno Facial</p>
                     </a>
-                    <a href="index.html" class="item item-4"> <!--Proximamente-->
+                    <a href="reflexologia.html" class="item item-4">
                         <p style="font-size: 1rem; padding-top: 3rem;">Tratamiento reflexógeno</p>
                     </a>
-                    <a href="index.html" class="item item-5"> <!--Proximamente-->
+                    <a href="radiofrecuencia.html" class="item item-5"> 
                         <p style="font-size: 1rem; padding-top: 3rem;">Radiofrecuencia</p>
                     </a>
                 </div>
@@ -80,21 +80,15 @@
         <section id="staff">
             
             <h2>El equipo médico está comprometido a brindar atención experta</h2>
-
             <div id="container-professionals">
-                <div class="item item-6 item_2">
-                    <p>Dra. Mercado Sandra</p>
-                </div>
-
-
-                <div class="item item-8 item_2">
-                    <p>Dra. Quinteros Rocio</p>
-                </div>
-                <div class="item item-9 item_2">
-                    <p>Dra. Gallardo Patricia</p>
+                <div v-for="item in items" >
+       
+                    <div :style="backgroundImg(item.img)" class="item_2">
+                        <p>{{item.name}}</p>
+                    </div>
+                
                 </div>
             </div>
-
         </section>
 
         <section id="contact">
@@ -193,11 +187,13 @@
 
     <div id="wa-container"></div>
     
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/vue.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/wa.js"></script>
     <script src="./js/footer.js"></script>
     <script src="./js/script.js"></script>
+    
 
 </body>
 

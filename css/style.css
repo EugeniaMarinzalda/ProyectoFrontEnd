@@ -281,7 +281,7 @@ nav {
     font-size: 0.9em;
     display: flex;
     column-gap: 24px;
-    width: 80%;
+    width: 100%;
     height: auto;
     z-index: 1;
 }
@@ -363,7 +363,7 @@ nav {
 
 #carousel-container {
     overflow: hidden;
-    width: 90%;
+    width:100%;
     margin: auto;
 }
 
@@ -376,10 +376,15 @@ nav {
     color: #f8b1b0;
 }
 
-
 .btn-style:hover {
     background-color: #f8b1b0;
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    #container-flechas {
+        display: none;
+    }
 }
 
 #container-btn {
@@ -400,20 +405,6 @@ nav {
 
 /* --------seccion profesionales-------- */
 
-
-.item-6 {
-    background-image: url('../img/professional-1.jpg');
-}
-
-
-.item-8 {
-    background-image: url('../img/professional-3.jpg');
-}
-
-.item-9 {
-    background-image: url('../img/professional-4.jpg');
-}
-
 #container-professionals {
     display: flex;
     flex-direction: row;
@@ -424,29 +415,31 @@ nav {
 }
 
 .item_2 {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     width: 320px;
     height: 430px;
-    padding-bottom: 20px;
     font-size: 1rem;
-    color: white;
-    overflow: hidden;
-    border-radius: 24px;
+    background-size: cover;
+    border-radius: 26px;
+}
+.item_2:hover {
+    border: 2.5px solid pink;
 }
 
 .item_2 p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 62px 32px 16px 16px;
-    margin: 0;
-    background: linear-gradient(to top, rgb(251, 172, 172) 0%, rgba(0, 0, 0, 0) 100%);
-    opacity: 0;
+text-align: center;
+margin: 0p;
+background: linear-gradient(to top, rgb(251, 172, 172) 0%, rgba(0, 0, 0, 0) 100%);
+color: white;
+border-radius: 24px;
+width: 100%;
+padding: 20px;
+opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 0;
-}
 
+}
 .item_2:hover p {
     opacity: 1;
 }
@@ -469,6 +462,7 @@ nav {
     margin: 16px;
     text-align: left;
 }
+
 
 /* -------- Contáctanos -------- */
 
@@ -691,7 +685,7 @@ footer {
     .footer-links {
         width: 100%;
         margin-bottom: 30px;
-    }
+    }   
 }
 
 .social-media {
@@ -780,7 +774,7 @@ footer {
 #cabezal {
     width: 100;
     height: 500px;
-    background-image: url(hydraco.png);
+    background-image: url('../img/hydraco.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -791,7 +785,37 @@ footer {
 #cabezald {
     width: 100;
     height: 500px;
-    background-image: url(depilacion.png);
+    background-image: url('../img/depilacion.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    fill-opacity: 0.5;
+
+}
+#cabezalr {
+    width: 100;
+    height: 500px;
+    background-image: url('../img/relleno.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    fill-opacity: 0.5;
+
+}
+#cabezalreflexo {
+    width: 100;
+    height: 500px;
+    background-image: url('../img/reflexologia.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    fill-opacity: 0.5;
+
+}
+#cabezalradio {
+    width: 100;
+    height: 500px;
+    background-image: url('../img/radiofrecuencia1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -803,7 +827,7 @@ footer {
     position: relative;
     text-align: center;
     color: #ffffff;
-    font-size: 5rem;
+    font-size: 4em;
     animation: fadeIn 2s ease-in-out;
 }
 /* Estilo para tablets (pantallas medianas) */
@@ -816,11 +840,14 @@ footer {
     }
 
     .hydrafacial {
-        font-size: 4em;
+        font-size: 3em;
+    }
+    .item_2 {
+    border: 2.5px solid pink;
     }
     .item_2 p {
-    opacity: 1;
-    }
+        opacity: 1;
+        }
 }
 
 /* Estilo para móviles (pantallas pequeñas) */
@@ -832,11 +859,14 @@ footer {
         height: 300px;
     }
     .hydrafacial {
-        font-size: 4em;
+        font-size:2.4em;
+    }
+    .item_2 {
+    border: 2.5px solid pink;
     }
     .item_2 p {
-    opacity: 1;
-    }
+        opacity: 1;
+        }
 }
 
 @keyframes fadeIn {
@@ -941,9 +971,8 @@ footer {
 
 }
 
-
-   /* Estilos para dispositivos móviles */
-   @media screen and (max-width: 768px) {
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
     #carousel-container {
         overflow: hidden;
         max-width: 100%;
@@ -952,14 +981,26 @@ footer {
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch; /* Suave en iOS */
-        scroll-behavior: smooth; /* Suave en otros navegadores */
+        scroll-behavior: smooth; 
     }
     .item {
         flex: 0 0 auto;
-        width: 100%;
+        width: 100%; 
         scroll-snap-align: start;
-        padding: 1rem; /* Distancia entre elementos */
+        padding: 1rem; 
+        position: relative; 
         text-align: center;
     }
+    .item p {
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem; 
+         
+    }
 }
+
+
+
