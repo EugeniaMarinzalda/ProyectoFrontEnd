@@ -10,7 +10,6 @@ createApp({
         this.dataFetch();
     },
   methods: {
-    
     async dataFetch() {
         try {
            const res =  await fetch("https://sebas350.github.io/api/db.json");

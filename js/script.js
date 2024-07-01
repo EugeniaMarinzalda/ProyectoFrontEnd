@@ -138,117 +138,12 @@ function redireccionar() {
     // Redireccionar a la página deseada
     window.location.href = "index.html";
 
-}
+};
 
-function validar() {
-    let usuario = document.getElementById("usuario");
-    let clave = document.getElementById("clave");
-    let error = false;
-    document.getElementById("validar_usuario").innerHTML = "&nbsp; ";
-    document.getElementById("validar_clave").innerHTML = "&nbsp; ";
-
-    if (usuario.value == "") {
-        document.getElementById("validar_usuario").innerHTML = "Debe completar el usuario";
-        error = true;
-        usuario.focus();
-    }
-
-
-    if (clave.value.length < 8) {
-        document.getElementById("validar_clave").innerHTML = "Debe completar el clave con 8 caracteres como mínimo";
-        error = true;
-        clave.focus();
-    } else {
-        // Validar que la contraseña tenga al menos una letra mayúscula
-        let tieneMayuscula = false;
-        for (let i = 0; i < clave.value.length; i++) {
-            if (clave.value[i] === clave.value[i].toUpperCase() && clave.value[i] !== clave.value[i].toLowerCase()) {
-                tieneMayuscula = true;
-                break;
-            }
-        }
-        if (!tieneMayuscula) {
-            document.getElementById("validar_clave").innerHTML = "La contraseña debe contener al menos una letra mayúscula";
-            error = true;
-            clave.focus();
-        }
-    }
-
-    if (!error) {
-        event.preventDefault();
-        usuario.value = "";
-        document.getElementById("validar_usuario").innerHTML = "&nbsp;";
-        clave.value = "";
-        document.getElementById("validar_clave").innerHTML = "&nbsp;";
-        localStorage.setItem('isLoggedIn', true);
-        redireccionar();
-
-    }
-
-    return !error;
-}
-
-function validarNvoUsuario() {
-    let usuarioNvo = document.getElementById("usuarioNvo");
-    let claveNva = document.getElementById("claveNva");
-    let error = false;
-    document.getElementById("validar_usuarioNvo").innerHTML = "&nbsp; ";
-    document.getElementById("validar_claveNva").innerHTML = "&nbsp; ";
-
-    if (usuarioNvo.value == "") {
-        document.getElementById("validar_usuarioNvo").innerHTML = "Debe completar el usuario";
-        error = true;
-        usuarioNvo.focus();
-    }
-    if (email.value == "") {
-        document.getElementById("validar_mail").innerHTML = "Debe completar el mail";
-        error = true;
-        email.focus();
-    }
-
-    if (claveNva.value.length < 8) {
-        document.getElementById("validar_claveNva").innerHTML = "Debe completar el clave con 8 caracteres como mínimo";
-        error = true;
-        claveNva.focus();
-    } else {
-        // Validar que la contraseña tenga al menos una letra mayúscula
-        let tieneMayuscula = false;
-        for (let i = 0; i < claveNva.value.length; i++) {
-            if (claveNva.value[i] === claveNva.value[i].toUpperCase() && claveNva.value[i] !== claveNva.value[i].toLowerCase()) {
-                tieneMayuscula = true;
-                break;
-            }
-        }
-        if (!tieneMayuscula) {
-            document.getElementById("validar_claveNva").innerHTML = "La contraseña debe contener al menos una letra mayúscula";
-            error = true;
-            claveNva.focus();
-        }
-    }
-    if (confirmClave.value === "") {
-        document.getElementById("validar_confirmClave").innerHTML = "Las claves deben coincidir";
-        error = true;
-        confirmClave.focus();
-    } else if (confirmClave.value !== claveNva.value) {
-        document.getElementById("validar_confirmClave").innerHTML = "Las claves deben coincidir";
-        error = true;
-        confirmClave.focus();
-    }
-
-    if (!error) {
-        event.preventDefault();
-        usuarioNvo.value = "";
-        document.getElementById("validar_usuarioNvo").innerHTML = "&nbsp;";
-        claveNva.value = "";
-        document.getElementById("validar_claveNva").innerHTML = "&nbsp;";
-        localStorage.setItem('isLoggedIn', true);
-        redireccionar();
-
-    }
-
-    return !error;
-
-}
+function redireccionar() {
+    // Redireccionar a la página deseada
+    window.location.href = "index.html";
+};
 
 function returnToHomePage() {
     // Cerrar la ventana emergente

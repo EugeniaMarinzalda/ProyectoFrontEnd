@@ -16,11 +16,11 @@
     <section class="form-wrapper">
         <div class="back-to-home-container">
 
-            <button onclick="returnToHomePage()" class="back-to-home"><i class="fa-solid fa-circle-xmark"></i></button>
+            <button onclick="redireccionar()" class="back-to-home"><i class="fa-solid fa-circle-xmark"></i></button>
         </div>
 
 
-        <form id="registroForm" onsubmit="return validarNvoUsuario();">
+        <form id="registroForm" onsubmit="grabar(event)">
 
             <h2>Registro de Usuario</h2> <br>
             <div class="form-control">
@@ -55,7 +55,7 @@
         </form><br>
 
 
-        <form onsubmit="return validar();">
+        <form id="login-form">
             <h2>Login</h2>
             <br>
             <div class="form-control">
@@ -81,8 +81,11 @@
 
     </section>
 
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/registro.js"></script>
 </body>
 
 </html>
